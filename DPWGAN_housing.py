@@ -2,7 +2,6 @@
 # DPWGAN (categorical) runner + SynthEval evaluation
 # - loops epsilons x seeds
 # - batch_size computed from sample_rate (ceil(q*n))
-# - uses repo DPWGAN training loop (sigma + weight clipping) instead of create_categorical_gan
 # - fixes SynthEval crash on pandas StringDtype by casting to object
 # - writes tidy metrics CSV + raw flattened CSV + epsilon summary CSV
 
@@ -14,11 +13,9 @@ import math
 import pandas as pd
 import numpy as np
 import torch
-import torch.nn as nn
 
 from dpwgan import CategoricalDataset
-from dpwgan.dpwgan import DPWGAN  # <-- benchmark-style DPWGAN
-
+from dpwgan.utils import create_categorical_gan
 
 # -----------------------
 # CONFIG
@@ -29,6 +26,8 @@ SAVE_SYNTH = True
 SYNTH_DIR  = ROOT / "data" / "synth" / "housing" / "dpwgan"  # pick whatever path you like
 
 
+# You said train/holdout are in a folder called "data"
+# Adjust filenames if yours differ.
 REAL_CSV    = ROOT / "data" / "housing_train_final.csv"
 HOLDOUT_CSV = ROOT / "data" / "housing_holdout_final.csv"
 
@@ -36,16 +35,16 @@ EVAL_DIR    = ROOT / "eval" / "metrics_raw" / "housing" / "dpwgan"
 SUMMARY_DIR = ROOT / "eval" / "summaries"
 
 EPS_LIST   = [1, 2, 3, 4, 5]
-SEED_RANGE = range(10, 16)
+SEED_RANGE = range(10, 20)
 
-# GAN hyperparams (match your minimal script)
+# GAN hyperparams
 NOISE_DIM   = 20
 HIDDEN_DIM  = 20
 N_CRITICS   = 5
 LR          = 1e-4
-WEIGHT_CLIP = 1 / HIDDEN_DIM  # keep your choice
+WEIGHT_CLIP = 1 / HIDDEN_DIM
 
-# Your epsilon -> epochs mapping (sigma fixed at 2)
+# Your epsilon -> epochs mapping (noise multiplier fixed at 2)
 EPOCHS_BY_EPS = {
     1: 20,
     2: 74,
@@ -54,13 +53,13 @@ EPOCHS_BY_EPS = {
     5: 383,
 }
 
-# DP-ish params you provided
-# Note: DPWGAN repo loop typically uses sigma (+ clipping) but may not consume delta/sample_rate.
+# DP params you provided
 NOISE_MULTIPLIER = 2.0
 DELTA = 1e-5
 SAMPLE_RATE = 0.01
 
-TARGET_COLUMN = "type"
+# SynthEval target column (edit if needed)
+TARGET_COLUMN = "median_house_value_binary"
 
 
 # -----------------------
@@ -87,9 +86,12 @@ def make_syntheval_safe(df: pd.DataFrame) -> pd.DataFrame:
     by converting pandas StringDtype -> object.
     """
     df = df.copy()
+
+    # pandas "string" dtype -> object
     string_cols = df.select_dtypes(include=["string"]).columns
     for c in string_cols:
         df[c] = df[c].astype("object")
+
     return df
 
 
@@ -103,6 +105,7 @@ def align_to_real_dtypes(real: pd.DataFrame, other: pd.DataFrame) -> pd.DataFram
         if c not in other.columns:
             continue
         rd = real[c].dtype
+        # if real is pandas StringDtype, keep it object for SynthEval
         if str(rd) == "string":
             rd = "object"
         try:
@@ -112,89 +115,65 @@ def align_to_real_dtypes(real: pd.DataFrame, other: pd.DataFrame) -> pd.DataFram
     return other
 
 
-# -------------------------------
-# Benchmark-style nets for one-hot flat vectors
-# -------------------------------
-class Generator(nn.Module):
-    def __init__(self, noise_dim: int, out_dim: int, hidden_dim: int):
-        super().__init__()
-        self.net = nn.Sequential(
-            nn.Linear(noise_dim, hidden_dim),
-            nn.ReLU(),
-            nn.Linear(hidden_dim, hidden_dim),
-            nn.ReLU(),
-            nn.Linear(hidden_dim, out_dim),
-            nn.Sigmoid(),  # keep outputs in [0,1] so argmax-per-category behaves sensibly
-        )
-
-    def forward(self, z):
-        return self.net(z)
-
-
-class Discriminator(nn.Module):
-    def __init__(self, in_dim: int, hidden_dim: int):
-        super().__init__()
-        self.net = nn.Sequential(
-            nn.Linear(in_dim, hidden_dim),
-            nn.ReLU(),
-            nn.Linear(hidden_dim, hidden_dim),
-            nn.ReLU(),
-            nn.Linear(hidden_dim, 1),
-        )
-
-    def forward(self, x):
-        return self.net(x).view(-1)
-
-
-def train_and_generate_dpwgan_onehot(
-    data_tensor: torch.Tensor,
-    *,
-    seed: int,
-    epochs: int,
-    batch_size: int,
-    sigma: float,
-    noise_dim: int,
-    hidden_dim: int,
-    n_critics: int,
-    learning_rate: float,
-    weight_clip: float,
-    device: str,
-) -> np.ndarray:
+def safe_gan_train(gan, *, data, epochs, batch_size):
     """
-    Train DPWGAN on one-hot-flat data (treated as continuous in [0,1]) and return generated one-hot-flat array.
-    Uses the repo DPWGAN training loop (benchmark-style): sigma + weight clipping.
+    dpwgan versions differ in train() signature.
+    Try passing DP args (sigma/delta/sample_rate). If unsupported, fall back.
     """
-    set_all_seeds(seed)
+    # Preferred: full DP kwargs
+    try:
+        return gan.train(
+            data=data,
+            epochs=epochs,
+            n_critics=N_CRITICS,
+            batch_size=batch_size,
+            learning_rate=LR,
+            weight_clip=WEIGHT_CLIP,
+            sigma=NOISE_MULTIPLIER,
+            delta=DELTA,
+            sample_rate=SAMPLE_RATE,
+        )
+    except TypeError:
+        pass
 
-    d = int(data_tensor.shape[1])
-    G = Generator(noise_dim=noise_dim, out_dim=d, hidden_dim=hidden_dim).to(device)
-    D = Discriminator(in_dim=d, hidden_dim=hidden_dim).to(device)
+    # Next: sigma only
+    try:
+        return gan.train(
+            data=data,
+            epochs=epochs,
+            n_critics=N_CRITICS,
+            batch_size=batch_size,
+            learning_rate=LR,
+            weight_clip=WEIGHT_CLIP,
+            sigma=NOISE_MULTIPLIER,
+        )
+    except TypeError:
+        pass
 
-    noise_fn = lambda n: torch.randn(int(n), int(noise_dim), device=device)
-    gan = DPWGAN(generator=G, discriminator=D, noise_function=noise_fn)
-
-    gan.train(
-        data=data_tensor,
-        epochs=int(epochs),
-        n_critics=int(n_critics),
-        batch_size=int(batch_size),
-        learning_rate=float(learning_rate),
-        sigma=float(sigma) if sigma is not None else None,
-        weight_clip=float(weight_clip),
+    # Last: no DP kwargs
+    logging.warning(
+        "dpwgan.train() did not accept sigma/delta/sample_rate; running without DP kwargs."
     )
-
-    with torch.no_grad():
-        flat = gan.generate(int(data_tensor.shape[0])).detach().cpu().numpy()
-    return flat
+    return gan.train(
+        data=data,
+        epochs=epochs,
+        n_critics=N_CRITICS,
+        batch_size=batch_size,
+        learning_rate=LR,
+        weight_clip=WEIGHT_CLIP,
+        sigma=None,
+    )
 
 
 def main():
     logging.basicConfig(level=logging.INFO)
 
+    # 1) Load train + (optional) holdout
     df = pd.read_csv(REAL_CSV)
 
     if HOLDOUT_CSV.exists():
         holdout = pd.read_csv(HOLDOUT_CSV)
+        # align column order
         holdout = holdout[df.columns.intersection(holdout.columns)]
         holdout = holdout.reindex(columns=df.columns)
     else:
@@ -211,9 +190,8 @@ def main():
     raw_csv_exists = raw_csv.exists()
 
     n = len(df)
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    logging.info("Using device=%s", device)
 
+    # 2) Loop eps × seeds
     for epsilon in EPS_LIST:
         if epsilon not in EPOCHS_BY_EPS:
             raise ValueError(f"Missing epochs mapping for epsilon={epsilon}")
@@ -225,46 +203,32 @@ def main():
             batch_size = batch_size_from_sample_rate(n, SAMPLE_RATE)
             print(
                 f"\n=== DPWGAN run (epsilon {epsilon}, epochs {epochs}, seed {seed}) ===\n"
-                f"n={n}, sample_rate={SAMPLE_RATE} -> batch_size={batch_size} | sigma={NOISE_MULTIPLIER}"
+                f"n={n}, sample_rate={SAMPLE_RATE} -> batch_size={batch_size}"
             )
 
-            # 1) Encode REAL train as one-hot flat
+            # 3) Build dataset encoder from REAL train data
             dataset = CategoricalDataset(df)
-            data_np = dataset.to_onehot_flat()
-            data_tensor = torch.tensor(data_np, dtype=torch.float32, device=device)
+            data_tensor = dataset.to_onehot_flat()
 
-            # 2) Train/generate using benchmark-style DPWGAN loop
-            flat_synth = train_and_generate_dpwgan_onehot(
-                data_tensor,
-                seed=seed,
-                epochs=epochs,
-                batch_size=batch_size,
-                sigma=NOISE_MULTIPLIER,
-                noise_dim=NOISE_DIM,
-                hidden_dim=HIDDEN_DIM,
-                n_critics=N_CRITICS,
-                learning_rate=LR,
-                weight_clip=WEIGHT_CLIP,
-                device=device,
-            )
+            # 4) Train GAN
+            gan = create_categorical_gan(NOISE_DIM, HIDDEN_DIM, dataset.dimensions)
+            safe_gan_train(gan, data=data_tensor, epochs=epochs, batch_size=batch_size)
 
-            # 3) Decode back to categorical dataframe
+            # 5) Generate synthetic rows (same n as train)
+            flat_synth = gan.generate(len(df))
             synth_df = dataset.from_onehot_flat(flat_synth)
 
-            # 3b) Save synthetic dataset (optional)
             if SAVE_SYNTH:
                 SYNTH_DIR.mkdir(parents=True, exist_ok=True)
                 synth_path = SYNTH_DIR / f"housing_dpwgan_eps_{int(epsilon)}_seed_{int(seed)}.csv"
                 synth_df.to_csv(synth_path, index=False)
 
-
-          
-
-            # 4) SynthEval (same as your current script)
+            # 6) SynthEval (fix pandas StringDtype crash + align dtypes)
             df_eval = make_syntheval_safe(df)
             synth_eval = make_syntheval_safe(synth_df)
             holdout_eval = make_syntheval_safe(holdout) if holdout is not None else None
 
+            # cast synth/holdout to match real as best as possible
             synth_eval = align_to_real_dtypes(df_eval, synth_eval)
             if holdout_eval is not None:
                 holdout_eval = align_to_real_dtypes(df_eval, holdout_eval)
@@ -317,13 +281,13 @@ def main():
                 )
                 raw_csv_exists = True
 
-    # 5) Combined tidy metrics CSV
+    # 7) Combined tidy metrics CSV
     combined = pd.concat(all_metrics, ignore_index=True)
     combined_csv = EVAL_DIR / "final_housing_dpwgan_metrics_all_eps_seeds_10_31.csv"
     combined.to_csv(combined_csv, index=False)
     print("✅ Combined metrics CSV:", combined_csv)
 
-    # 6) mean/std summary per epsilon+metric
+    # 8) mean/std summary per epsilon+metric
     combined["value_num"] = pd.to_numeric(combined["value"], errors="coerce")
     summary = (
         combined.groupby(["epsilon", "metric"])["value_num"]
