@@ -36,7 +36,7 @@ EVAL_DIR    = ROOT / "eval" / "metrics_raw" / "wine" / "dpwgan"
 SUMMARY_DIR = ROOT / "eval" / "summaries"
 
 EPS_LIST   = [1, 2, 3, 4, 5]
-SEED_RANGE = range(10, 16)
+SEED_RANGE = range(10, 20)
 
 # GAN hyperparams (match your minimal script)
 NOISE_DIM   = 20
