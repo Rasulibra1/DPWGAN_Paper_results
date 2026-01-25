@@ -16,4 +16,7 @@ module purge
 module load python/3.10.2
 #cd /data/homezvol2/ibragimr/paper-results-vinecops
 source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install statsmodels
 python examples/dpwgan_constant.py
+
