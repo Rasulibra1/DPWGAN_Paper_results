@@ -22,6 +22,10 @@ from dpwgan.utils import create_categorical_gan
 # -----------------------
 ROOT = Path("/data/homezvol2/ibragimr/DPWGAN_Paper_results")
 
+SAVE_SYNTH = True
+SYNTH_DIR  = ROOT / "data" / "synth" / "cancer" / "dpwgan"  # pick whatever path you like
+
+
 # You said train/holdout are in a folder called "data"
 # Adjust filenames if yours differ.
 REAL_CSV    = ROOT / "data" / "cancer_train_final.csv"
@@ -31,7 +35,7 @@ EVAL_DIR    = ROOT / "eval" / "metrics_raw" / "cancer" / "dpwgan"
 SUMMARY_DIR = ROOT / "eval" / "summaries"
 
 EPS_LIST   = [1, 2, 3, 4, 5]
-SEED_RANGE = range(10, 16)
+SEED_RANGE = range(10, 20)
 
 # GAN hyperparams
 NOISE_DIM   = 20
@@ -213,6 +217,11 @@ def main():
             # 5) Generate synthetic rows (same n as train)
             flat_synth = gan.generate(len(df))
             synth_df = dataset.from_onehot_flat(flat_synth)
+
+            if SAVE_SYNTH:
+                SYNTH_DIR.mkdir(parents=True, exist_ok=True)
+                synth_path = SYNTH_DIR / f"cancer_dpwgan_eps_{int(epsilon)}_seed_{int(seed)}.csv"
+                synth_df.to_csv(synth_path, index=False)
 
             # 6) SynthEval (fix pandas StringDtype crash + align dtypes)
             df_eval = make_syntheval_safe(df)
