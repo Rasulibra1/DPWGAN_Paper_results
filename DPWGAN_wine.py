@@ -23,7 +23,7 @@ from dpwgan.dpwgan import DPWGAN  # <-- benchmark-style DPWGAN
 # -----------------------
 # CONFIG
 # -----------------------
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path("/data/homezvol2/ibragimr/DPWGAN_Paper_results")
 
 SAVE_SYNTH = True
 SYNTH_DIR  = ROOT / "data" / "synth" / "wine" / "dpwgan"  # pick whatever path you like
