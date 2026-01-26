@@ -1,0 +1,5 @@
+/export/spool/slurm/slurmd.spool/job47839255/slurm_script: line 18: .venv/bin/activate: No such file or directory
+Traceback (most recent call last):
+  File "/data/homezvol2/ibragimr/DPWGAN_Paper_results/examples/dpwgan_constant.py", line 31, in <module>
+    import statsmodels.formula.api as smf
+ModuleNotFoundError: No module named 'statsmodels'

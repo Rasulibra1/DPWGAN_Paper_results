@@ -1,0 +1,12 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pip in /data/homezvol2/ibragimr/.local/lib/python3.10/site-packages (25.3)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: statsmodels in /data/homezvol2/ibragimr/.local/lib/python3.10/site-packages (0.14.6)
+Requirement already satisfied: numpy<3,>=1.22.3 in /data/homezvol2/ibragimr/.local/lib/python3.10/site-packages (from statsmodels) (1.26.4)
+Requirement already satisfied: scipy!=1.9.2,>=1.8 in /data/homezvol2/ibragimr/.local/lib/python3.10/site-packages (from statsmodels) (1.14.1)
+Requirement already satisfied: pandas!=2.1.0,>=1.4 in /opt/apps/python/3.10.2/lib/python3.10/site-packages (from statsmodels) (1.4.1)
+Requirement already satisfied: patsy>=0.5.6 in /data/homezvol2/ibragimr/.local/lib/python3.10/site-packages (from statsmodels) (1.0.2)
+Requirement already satisfied: packaging>=21.3 in /opt/apps/python/3.10.2/lib/python3.10/site-packages (from statsmodels) (21.3)
+Requirement already satisfied: python-dateutil>=2.8.1 in /opt/apps/python/3.10.2/lib/python3.10/site-packages (from pandas!=2.1.0,>=1.4->statsmodels) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /opt/apps/python/3.10.2/lib/python3.10/site-packages (from pandas!=2.1.0,>=1.4->statsmodels) (2021.3)
+Requirement already satisfied: six>=1.5 in /opt/apps/python/3.10.2/lib/python3.10/site-packages (from python-dateutil>=2.8.1->pandas!=2.1.0,>=1.4->statsmodels) (1.16.0)

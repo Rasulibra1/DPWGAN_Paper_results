@@ -1,0 +1,2988 @@
+
+=== DPWGAN run (epsilon 1, epochs 20, seed 10) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0533  0.0007   |
+| PCA difference in eigenvalues (exp. var.):   0.3013           |
+| PCA angle diff. between eigenvectors     :   0.8851           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.6001           |
+| Pairwise mutual information difference   :   0.4682           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2291  0.0438   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2503  0.0434   |
+|       -> avg. Total Variation Distance   :   0.0595  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0047  0.0047   |
+| Propensity mean squared error (pMSE)     :   0.0768  0.0007   |
+|   -> average pMSE classifier accuracy    :   0.7770  0.0017   |
+| Quantile mean squared error (qMSE)       :   0.0115  0.0041   |
+| Nearest neighbour adversarial accuracy   :   0.9447  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.3343           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.5042  -0.4252  0.0122   |
+| AdaBoostClassifier      :   0.7840  0.5157  -0.2683  0.0063   |
+| SupportVectorMachine    :   0.8462  0.4983  -0.3479  0.0025   |
+| LogisticRegression      :   0.8224  0.4984  -0.3240  0.0034   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5042  -0.3413  0.0036   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4943  -0.3822           |
+| AdaBoostClassifier      :   0.8040  0.4943  -0.3098           |
+| SupportVectorMachine    :   0.8515  0.4987  -0.3528           |
+| LogisticRegression      :   0.8236  0.4987  -0.3249           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4965  -0.3424  0.0080   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8726  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0001  0.0019   |
+| Privacy loss (diff. in NNAA)             :   -0.0231  0.0005   |
+| Median distance to closest record        :   7.2622           |
+| Hitting rate (0.03 x range(att))         :   0.0043           |
+| Epsilon identifiability risk             :   0.0124           |       
+| Privacy loss (diff. in eps. risk)        :   0.0029           |
+| Membership inference attack Classifier F1:   0.3398  0.0015   |
+|   -> Precision                           :   0.4738  0.0734   |
+|   -> Recall                              :   0.0076  0.0012   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 1, epochs 20, seed 11) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0502  0.0007   |
+| PCA difference in eigenvalues (exp. var.):   0.3107           |
+| PCA angle diff. between eigenvectors     :   0.5881           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5829           |
+| Pairwise mutual information difference   :   0.4618           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2150  0.0466   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2397  0.0449   |
+|       -> avg. Total Variation Distance   :   0.0174  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0014  0.0014   |
+| Propensity mean squared error (pMSE)     :   0.0734  0.0006   |
+|   -> average pMSE classifier accuracy    :   0.7721  0.0033   |
+| Quantile mean squared error (qMSE)       :   0.0110  0.0041   |
+| Nearest neighbour adversarial accuracy   :   0.9430  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.3860           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4797  -0.4497  0.0126   |
+| AdaBoostClassifier      :   0.7840  0.4796  -0.3044  0.0114   |
+| SupportVectorMachine    :   0.8462  0.4859  -0.3603  0.0129   |
+| LogisticRegression      :   0.8224  0.5021  -0.3203  0.0034   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4868  -0.3587  0.0054   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5060  -0.3704           |
+| AdaBoostClassifier      :   0.8040  0.4813  -0.3227           |
+| SupportVectorMachine    :   0.8515  0.4984  -0.3531           |
+| LogisticRegression      :   0.8236  0.5016  -0.3220           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4968  -0.3421  0.0060   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8736  0.0008   |
+| Privacy loss (diff. in NNDR)             :   0.0005  0.0019   |
+| Privacy loss (diff. in NNAA)             :   -0.0251  0.0005   |
+| Median distance to closest record        :   7.0500           |
+| Hitting rate (0.03 x range(att))         :   0.0072           |
+| Epsilon identifiability risk             :   0.0135           |       
+| Privacy loss (diff. in eps. risk)        :   0.0044           |
+| Membership inference attack Classifier F1:   0.3410  0.0011   |
+|   -> Precision                           :   0.5165  0.0681   |
+|   -> Recall                              :   0.0088  0.0008   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 1, epochs 20, seed 12) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0496  0.0007   |
+| PCA difference in eigenvalues (exp. var.):   0.3186           |
+| PCA angle diff. between eigenvectors     :   0.9688           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5966           |
+| Pairwise mutual information difference   :   0.4622           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2140  0.0486   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2396  0.0469   |
+|       -> avg. Total Variation Distance   :   0.0094  nan   |
+|   -> average combined p-value            :   0.0095  0.0095   |
+|       -> # significant tests at a=0.05   :    8               |
+|       -> fraction of significant tests   :   0.8889           |
+| Average empirical Hellinger distance     :   0.0007  0.0007   |
+| Propensity mean squared error (pMSE)     :   0.0756  0.0005   |
+|   -> average pMSE classifier accuracy    :   0.7763  0.0038   |
+| Quantile mean squared error (qMSE)       :   0.0111  0.0041   |
+| Nearest neighbour adversarial accuracy   :   0.9444  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.4452           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4961  -0.4333  0.0077   |
+| AdaBoostClassifier      :   0.7840  0.5105  -0.2735  0.0297   |
+| SupportVectorMachine    :   0.8462  0.5121  -0.3342  0.0079   |
+| LogisticRegression      :   0.8224  0.5425  -0.2799  0.0084   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5153  -0.3302  0.0082   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5292  -0.3472           |
+| AdaBoostClassifier      :   0.8040  0.4730  -0.3310           |
+| SupportVectorMachine    :   0.8515  0.4759  -0.3756           |
+| LogisticRegression      :   0.8236  0.4957  -0.3279           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4935  -0.3454  0.0055   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8733  0.0008   |
+| Privacy loss (diff. in NNDR)             :   -0.0022  0.0019   |
+| Privacy loss (diff. in NNAA)             :   -0.0241  0.0004   |
+| Median distance to closest record        :   7.1205           |
+| Hitting rate (0.03 x range(att))         :   0.0073           |
+| Epsilon identifiability risk             :   0.0125           |       
+| Privacy loss (diff. in eps. risk)        :   0.0031           |
+| Membership inference attack Classifier F1:   0.3374  0.0009   |
+|   -> Precision                           :   0.3541  0.0336   |
+|   -> Recall                              :   0.0057  0.0011   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 1, epochs 20, seed 13) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0495  0.0007   |
+| PCA difference in eigenvalues (exp. var.):   0.3235           |
+| PCA angle diff. between eigenvectors     :   0.4269           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5965           |
+| Pairwise mutual information difference   :   0.4589           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2144  0.0475   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2374  0.0471   |
+|       -> avg. Total Variation Distance   :   0.0298  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0023  0.0023   |
+| Propensity mean squared error (pMSE)     :   0.0741  0.0003   |
+|   -> average pMSE classifier accuracy    :   0.7728  0.0036   |
+| Quantile mean squared error (qMSE)       :   0.0110  0.0041   |
+| Nearest neighbour adversarial accuracy   :   0.9438  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.2351           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.5345  -0.3949  0.0052   |
+| AdaBoostClassifier      :   0.7840  0.5428  -0.2412  0.0202   |
+| SupportVectorMachine    :   0.8462  0.5059  -0.3403  0.0064   |
+| LogisticRegression      :   0.8224  0.5135  -0.3089  0.0064   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5242  -0.3213  0.0057   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5212  -0.3553           |
+| AdaBoostClassifier      :   0.8040  0.5050  -0.2990           |
+| SupportVectorMachine    :   0.8515  0.4982  -0.3533           |
+| LogisticRegression      :   0.8236  0.4989  -0.3247           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5058  -0.3331  0.0067   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8650  0.0009   |
+| Privacy loss (diff. in NNDR)             :   -0.0001  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0275  0.0004   |
+| Median distance to closest record        :   7.0055           |
+| Hitting rate (0.03 x range(att))         :   0.0070           |
+| Epsilon identifiability risk             :   0.0146           |       
+| Privacy loss (diff. in eps. risk)        :   0.0061           |
+| Membership inference attack Classifier F1:   0.3419  0.0017   |
+|   -> Precision                           :   0.5222  0.0480   |
+|   -> Recall                              :   0.0096  0.0017   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 1, epochs 20, seed 14) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0494  0.0007   |
+| PCA difference in eigenvalues (exp. var.):   0.3268           |
+| PCA angle diff. between eigenvectors     :   0.6062           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5864           |
+| Pairwise mutual information difference   :   0.4555           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2103  0.0481   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2364  0.0459   |
+|       -> avg. Total Variation Distance   :   0.0018  nan   |
+|   -> average combined p-value            :   0.0826  0.0826   |
+|       -> # significant tests at a=0.05   :    8               |
+|       -> fraction of significant tests   :   0.8889           |
+| Average empirical Hellinger distance     :   0.0001  0.0001   |
+| Propensity mean squared error (pMSE)     :   0.0738  0.0008   |
+|   -> average pMSE classifier accuracy    :   0.7732  0.0022   |
+| Quantile mean squared error (qMSE)       :   0.0109  0.0041   |
+| Nearest neighbour adversarial accuracy   :   0.9436  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.2219           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.5051  -0.4243  0.0093   |
+| AdaBoostClassifier      :   0.7840  0.5521  -0.2319  0.0125   |
+| SupportVectorMachine    :   0.8462  0.4509  -0.3953  0.0125   |
+| LogisticRegression      :   0.8224  0.3940  -0.4284  0.0409   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4755  -0.3700  0.0114   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5190  -0.3575           |
+| AdaBoostClassifier      :   0.8040  0.5261  -0.2780           |
+| SupportVectorMachine    :   0.8515  0.5131  -0.3384           |
+| LogisticRegression      :   0.8236  0.5992  -0.2244           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5393  -0.2995  0.0151   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8730  0.0009   |
+| Privacy loss (diff. in NNDR)             :   -0.0022  0.0019   |
+| Privacy loss (diff. in NNAA)             :   -0.0263  0.0005   |
+| Median distance to closest record        :   7.0480           |
+| Hitting rate (0.03 x range(att))         :   0.0060           |
+| Epsilon identifiability risk             :   0.0132           |       
+| Privacy loss (diff. in eps. risk)        :   0.0039           |
+| Membership inference attack Classifier F1:   0.3404  0.0008   |
+|   -> Precision                           :   0.4917  0.0464   |
+|   -> Recall                              :   0.0082  0.0005   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 1, epochs 20, seed 15) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0489  0.0007   |
+| PCA difference in eigenvalues (exp. var.):   0.3245           |
+| PCA angle diff. between eigenvectors     :   0.8214           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5934           |
+| Pairwise mutual information difference   :   0.4547           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2121  0.0489   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2363  0.0482   |
+|       -> avg. Total Variation Distance   :   0.0185  nan   |
+|   -> average combined p-value            :   0.0002  0.0002   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0015  0.0015   |
+| Propensity mean squared error (pMSE)     :   0.0748  0.0010   |
+|   -> average pMSE classifier accuracy    :   0.7747  0.0019   |
+| Quantile mean squared error (qMSE)       :   0.0110  0.0042   |
+| Nearest neighbour adversarial accuracy   :   0.9453  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.4700           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4941  -0.4353  0.0078   |
+| AdaBoostClassifier      :   0.7840  0.4882  -0.2958  0.0058   |
+| SupportVectorMachine    :   0.8462  0.4776  -0.3686  0.0063   |
+| LogisticRegression      :   0.8224  0.4917  -0.3307  0.0034   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4879  -0.3576  0.0030   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4757  -0.4008           |
+| AdaBoostClassifier      :   0.8040  0.5026  -0.3014           |
+| SupportVectorMachine    :   0.8515  0.4659  -0.3856           |
+| LogisticRegression      :   0.8236  0.4967  -0.3269           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4852  -0.3537  0.0118   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8716  0.0009   |
+| Privacy loss (diff. in NNDR)             :   -0.0019  0.0019   |
+| Privacy loss (diff. in NNAA)             :   -0.0257  0.0006   |
+| Median distance to closest record        :   7.1196           |
+| Hitting rate (0.03 x range(att))         :   0.0054           |
+| Epsilon identifiability risk             :   0.0132           |       
+| Privacy loss (diff. in eps. risk)        :   0.0029           |
+| Membership inference attack Classifier F1:   0.3406  0.0016   |
+|   -> Precision                           :   0.5417  0.1024   |
+|   -> Recall                              :   0.0082  0.0012   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 1, epochs 20, seed 16) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0512  0.0007   |
+| PCA difference in eigenvalues (exp. var.):   0.3166           |
+| PCA angle diff. between eigenvectors     :   0.9764           |
+| Average confidence interval overlap      :   0.0558  0.0558   |
+|   -> # non-overlapping COIs at 95%       :    7               |
+|   -> fraction of non-overlapping CIs     :   0.8750           |
+| Mixed correlation matrix difference      :   3.5994           |
+| Pairwise mutual information difference   :   0.4691           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2255  0.0452   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2480  0.0445   |
+|       -> avg. Total Variation Distance   :   0.0459  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0036  0.0036   |
+| Propensity mean squared error (pMSE)     :   0.0759  0.0007   |
+|   -> average pMSE classifier accuracy    :   0.7772  0.0018   |
+| Quantile mean squared error (qMSE)       :   0.0115  0.0041   |
+| Nearest neighbour adversarial accuracy   :   0.9424  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.1736           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4846  -0.4448  0.0065   |
+| AdaBoostClassifier      :   0.7840  0.5042  -0.2798  0.0052   |
+| SupportVectorMachine    :   0.8462  0.4981  -0.3481  0.0025   |
+| LogisticRegression      :   0.8224  0.4983  -0.3241  0.0034   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4963  -0.3492  0.0023   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5175  -0.3589           |
+| AdaBoostClassifier      :   0.8040  0.5070  -0.2970           |
+| SupportVectorMachine    :   0.8515  0.4987  -0.3528           |
+| LogisticRegression      :   0.8236  0.4987  -0.3249           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5054  -0.3334  0.0071   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8701  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0010  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0238  0.0004   |
+| Median distance to closest record        :   7.1637           |
+| Hitting rate (0.03 x range(att))         :   0.0064           |
+| Epsilon identifiability risk             :   0.0144           |       
+| Privacy loss (diff. in eps. risk)        :   0.0050           |
+| Membership inference attack Classifier F1:   0.3419  0.0015   |
+|   -> Precision                           :   0.5539  0.0432   |
+|   -> Recall                              :   0.0094  0.0015   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 1, epochs 20, seed 17) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0482  0.0007   |
+| PCA difference in eigenvalues (exp. var.):   0.3247           |
+| PCA angle diff. between eigenvectors     :   0.4372           |
+| Average confidence interval overlap      :   0.0229  0.0229   |
+|   -> # non-overlapping COIs at 95%       :    7               |
+|   -> fraction of non-overlapping CIs     :   0.8750           |
+| Mixed correlation matrix difference      :   3.5956           |
+| Pairwise mutual information difference   :   0.4566           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2098  0.0468   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2335  0.0457   |
+|       -> avg. Total Variation Distance   :   0.0201  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0016  0.0016   |
+| Propensity mean squared error (pMSE)     :   0.0728  0.0002   |
+|   -> average pMSE classifier accuracy    :   0.7706  0.0019   |
+| Quantile mean squared error (qMSE)       :   0.0108  0.0041   |
+| Nearest neighbour adversarial accuracy   :   0.9454  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.5691           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4916  -0.4378  0.0069   |
+| AdaBoostClassifier      :   0.7840  0.5002  -0.2838  0.0069   |
+| SupportVectorMachine    :   0.8462  0.5116  -0.3346  0.0048   |
+| LogisticRegression      :   0.8224  0.5038  -0.3186  0.0037   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5018  -0.3437  0.0029   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5221  -0.3543           |
+| AdaBoostClassifier      :   0.8040  0.4972  -0.3068           |
+| SupportVectorMachine    :   0.8515  0.5021  -0.3494           |
+| LogisticRegression      :   0.8236  0.5028  -0.3208           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5061  -0.3328  0.0057   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8728  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0003  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0276  0.0005   |
+| Median distance to closest record        :   7.0140           |
+| Hitting rate (0.03 x range(att))         :   0.0067           |
+| Epsilon identifiability risk             :   0.0135           |       
+| Privacy loss (diff. in eps. risk)        :   0.0043           |
+| Membership inference attack Classifier F1:   0.3390  0.0006   |
+|   -> Precision                           :   0.5360  0.0685   |
+|   -> Recall                              :   0.0065  0.0004   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 1, epochs 20, seed 18) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0484  0.0007   |
+| PCA difference in eigenvalues (exp. var.):   0.3210           |
+| PCA angle diff. between eigenvectors     :   0.4954           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5786           |
+| Pairwise mutual information difference   :   0.4460           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2069  0.0475   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2319  0.0457   |
+|       -> avg. Total Variation Distance   :   0.0069  nan   |
+|   -> average combined p-value            :   0.0253  0.0253   |
+|       -> # significant tests at a=0.05   :    8               |
+|       -> fraction of significant tests   :   0.8889           |
+| Average empirical Hellinger distance     :   0.0005  0.0005   |
+| Propensity mean squared error (pMSE)     :   0.0723  0.0003   |
+|   -> average pMSE classifier accuracy    :   0.7701  0.0021   |
+| Quantile mean squared error (qMSE)       :   0.0107  0.0041   |
+| Nearest neighbour adversarial accuracy   :   0.9415  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.4791           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4880  -0.4414  0.0063   |
+| AdaBoostClassifier      :   0.7840  0.4714  -0.3126  0.0071   |
+| SupportVectorMachine    :   0.8462  0.4022  -0.4440  0.0090   |
+| LogisticRegression      :   0.8224  0.4793  -0.3431  0.0090   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4602  -0.3853  0.0040   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4965  -0.3800           |
+| AdaBoostClassifier      :   0.8040  0.5251  -0.2789           |
+| SupportVectorMachine    :   0.8515  0.4487  -0.4027           |
+| LogisticRegression      :   0.8236  0.4546  -0.3690           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4812  -0.3577  0.0136   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8734  0.0009   |
+| Privacy loss (diff. in NNDR)             :   -0.0017  0.0019   |
+| Privacy loss (diff. in NNAA)             :   -0.0256  0.0006   |
+| Median distance to closest record        :   6.9336           |
+| Hitting rate (0.03 x range(att))         :   0.0069           |
+| Epsilon identifiability risk             :   0.0130           |       
+| Privacy loss (diff. in eps. risk)        :   0.0029           |
+| Membership inference attack Classifier F1:   0.3413  0.0010   |
+|   -> Precision                           :   0.5204  0.0329   |
+|   -> Recall                              :   0.0090  0.0009   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 1, epochs 20, seed 19) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0529  0.0007   |
+| PCA difference in eigenvalues (exp. var.):   0.2944           |
+| PCA angle diff. between eigenvectors     :   0.8682           |
+| Average confidence interval overlap      :   0.0416  0.0416   |
+|   -> # non-overlapping COIs at 95%       :    7               |
+|   -> fraction of non-overlapping CIs     :   0.8750           |
+| Mixed correlation matrix difference      :   3.5908           |
+| Pairwise mutual information difference   :   0.4697           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2375  0.0412   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2531  0.0432   |
+|       -> avg. Total Variation Distance   :   0.1123  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0089  0.0089   |
+| Propensity mean squared error (pMSE)     :   0.0783  0.0005   |
+|   -> average pMSE classifier accuracy    :   0.7800  0.0013   |
+| Quantile mean squared error (qMSE)       :   0.0118  0.0043   |
+| Nearest neighbour adversarial accuracy   :   0.9484  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.6022           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.5069  -0.4226  0.0064   |
+| AdaBoostClassifier      :   0.7840  0.4994  -0.2845  0.0049   |
+| SupportVectorMachine    :   0.8462  0.4983  -0.3479  0.0025   |
+| LogisticRegression      :   0.8224  0.4983  -0.3241  0.0034   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5007  -0.3447  0.0023   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4884  -0.3881           |
+| AdaBoostClassifier      :   0.8040  0.5006  -0.3034           |
+| SupportVectorMachine    :   0.8515  0.4987  -0.3528           |
+| LogisticRegression      :   0.8236  0.4987  -0.3249           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4966  -0.3423  0.0092   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8685  0.0009   |
+| Privacy loss (diff. in NNDR)             :   -0.0015  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0235  0.0004   |
+| Median distance to closest record        :   7.2520           |
+| Hitting rate (0.03 x range(att))         :   0.0065           |
+| Epsilon identifiability risk             :   0.0118           |       
+| Privacy loss (diff. in eps. risk)        :   0.0019           |
+| Membership inference attack Classifier F1:   0.3382  0.0012   |
+|   -> Precision                           :   0.3889  0.0384   |
+|   -> Recall                              :   0.0065  0.0011   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 2, epochs 74, seed 10) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0506  0.0007   |
+| PCA difference in eigenvalues (exp. var.):   0.3085           |
+| PCA angle diff. between eigenvectors     :   0.8553           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5803           |
+| Pairwise mutual information difference   :   0.4500           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2288  0.0440   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2478  0.0449   |
+|       -> avg. Total Variation Distance   :   0.0765  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0060  0.0060   |
+| Propensity mean squared error (pMSE)     :   0.0772  0.0007   |
+|   -> average pMSE classifier accuracy    :   0.7759  0.0022   |
+| Quantile mean squared error (qMSE)       :   0.0116  0.0042   |
+| Nearest neighbour adversarial accuracy   :   0.9454  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.1314           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.5127  -0.4167  0.0045   |
+| AdaBoostClassifier      :   0.7840  0.4966  -0.2873  0.0060   |
+| SupportVectorMachine    :   0.8462  0.5028  -0.3434  0.0025   |
+| LogisticRegression      :   0.8224  0.5017  -0.3208  0.0034   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5034  -0.3421  0.0021   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5192  -0.3572           |
+| AdaBoostClassifier      :   0.8040  0.5033  -0.3007           |
+| SupportVectorMachine    :   0.8515  0.5013  -0.3501           |
+| LogisticRegression      :   0.8236  0.5013  -0.3222           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5063  -0.3326  0.0065   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8713  0.0009   |
+| Privacy loss (diff. in NNDR)             :   -0.0008  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0241  0.0005   |
+| Median distance to closest record        :   7.1321           |
+| Hitting rate (0.03 x range(att))         :   0.0041           |
+| Epsilon identifiability risk             :   0.0130           |       
+| Privacy loss (diff. in eps. risk)        :   0.0039           |
+| Membership inference attack Classifier F1:   0.3421  0.0012   |
+|   -> Precision                           :   0.5832  0.0295   |
+|   -> Recall                              :   0.0094  0.0012   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 2, epochs 74, seed 11) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0309  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.3048           |
+| PCA angle diff. between eigenvectors     :   0.4735           |
+| Average confidence interval overlap      :   0.1059  0.1059   |
+|   -> # non-overlapping COIs at 95%       :    7               |
+|   -> fraction of non-overlapping CIs     :   0.8750           |
+| Mixed correlation matrix difference      :   3.5859           |
+| Pairwise mutual information difference   :   0.2893           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.1459  0.0297   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.1606  0.0292   |
+|       -> avg. Total Variation Distance   :   0.0284  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0022  0.0022   |
+| Propensity mean squared error (pMSE)     :   0.0392  0.0006   |
+|   -> average pMSE classifier accuracy    :   0.7061  0.0032   |
+| Quantile mean squared error (qMSE)       :   0.0072  0.0042   |
+| Nearest neighbour adversarial accuracy   :   0.9270  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.3909           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4976  -0.4318  0.0059   |
+| AdaBoostClassifier      :   0.7840  0.5024  -0.2816  0.0073   |
+| SupportVectorMachine    :   0.8462  0.4814  -0.3648  0.0037   |
+| LogisticRegression      :   0.8224  0.4955  -0.3269  0.0036   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4942  -0.3513  0.0027   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5092  -0.3673           |
+| AdaBoostClassifier      :   0.8040  0.5006  -0.3034           |
+| SupportVectorMachine    :   0.8515  0.4987  -0.3528           |
+| LogisticRegression      :   0.8236  0.4977  -0.3259           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5015  -0.3374  0.0071   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8682  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0019  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0287  0.0005   |
+| Median distance to closest record        :   6.0481           |
+| Hitting rate (0.03 x range(att))         :   0.0673           |
+| Epsilon identifiability risk             :   0.0149           |       
+| Privacy loss (diff. in eps. risk)        :   0.0045           |
+| Membership inference attack Classifier F1:   0.3387  0.0012   |
+|   -> Precision                           :   0.4126  0.0474   |
+|   -> Recall                              :   0.0070  0.0009   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 2, epochs 74, seed 12) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0347  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.3246           |
+| PCA angle diff. between eigenvectors     :   0.4968           |
+| Average confidence interval overlap      :   0.1012  0.1012   |
+|   -> # non-overlapping COIs at 95%       :    7               |
+|   -> fraction of non-overlapping CIs     :   0.8750           |
+| Mixed correlation matrix difference      :   3.6002           |
+| Pairwise mutual information difference   :   0.2993           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.1557  0.0342   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.1738  0.0329   |
+|       -> avg. Total Variation Distance   :   0.0107  nan   |
+|   -> average combined p-value            :   0.0060  0.0060   |
+|       -> # significant tests at a=0.05   :    8               |
+|       -> fraction of significant tests   :   0.8889           |
+| Average empirical Hellinger distance     :   0.0008  0.0008   |
+| Propensity mean squared error (pMSE)     :   0.0468  0.0006   |
+|   -> average pMSE classifier accuracy    :   0.7223  0.0035   |
+| Quantile mean squared error (qMSE)       :   0.0077  0.0042   |
+| Nearest neighbour adversarial accuracy   :   0.9310  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.4765           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4534  -0.4760  0.0089   |
+| AdaBoostClassifier      :   0.7840  0.4812  -0.3028  0.0286   |
+| SupportVectorMachine    :   0.8462  0.4609  -0.3853  0.0105   |
+| LogisticRegression      :   0.8224  0.4022  -0.4202  0.0112   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4494  -0.3961  0.0084   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4925  -0.3839           |
+| AdaBoostClassifier      :   0.8040  0.4776  -0.3264           |
+| SupportVectorMachine    :   0.8515  0.4686  -0.3829           |
+| LogisticRegression      :   0.8236  0.4700  -0.3536           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4772  -0.3617  0.0069   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8704  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0001  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0286  0.0005   |
+| Median distance to closest record        :   6.2598           |
+| Hitting rate (0.03 x range(att))         :   0.0560           |
+| Epsilon identifiability risk             :   0.0135           |       
+| Privacy loss (diff. in eps. risk)        :   0.0019           |
+| Membership inference attack Classifier F1:   0.3405  0.0016   |
+|   -> Precision                           :   0.4707  0.0450   |
+|   -> Recall                              :   0.0084  0.0016   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 2, epochs 74, seed 13) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0326  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.3263           |
+| PCA angle diff. between eigenvectors     :   0.4757           |
+| Average confidence interval overlap      :   0.0623  0.0623   |
+|   -> # non-overlapping COIs at 95%       :    7               |
+|   -> fraction of non-overlapping CIs     :   0.8750           |
+| Mixed correlation matrix difference      :   3.5715           |
+| Pairwise mutual information difference   :   0.2761           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.1429  0.0305   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.1597  0.0289   |
+|       -> avg. Total Variation Distance   :   0.0085  nan   |
+|   -> average combined p-value            :   0.0138  0.0138   |
+|       -> # significant tests at a=0.05   :    8               |
+|       -> fraction of significant tests   :   0.8889           |
+| Average empirical Hellinger distance     :   0.0007  0.0007   |
+| Propensity mean squared error (pMSE)     :   0.0414  0.0005   |
+|   -> average pMSE classifier accuracy    :   0.7098  0.0019   |
+| Quantile mean squared error (qMSE)       :   0.0072  0.0042   |
+| Nearest neighbour adversarial accuracy   :   0.9269  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.2589           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.5036  -0.4258  0.0139   |
+| AdaBoostClassifier      :   0.7840  0.5359  -0.2481  0.0121   |
+| SupportVectorMachine    :   0.8462  0.4585  -0.3877  0.0084   |
+| LogisticRegression      :   0.8224  0.5868  -0.2356  0.0172   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5212  -0.3243  0.0066   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5013  -0.3751           |
+| AdaBoostClassifier      :   0.8040  0.5026  -0.3014           |
+| SupportVectorMachine    :   0.8515  0.5207  -0.3308           |
+| LogisticRegression      :   0.8236  0.5314  -0.2921           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5140  -0.3249  0.0093   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8692  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0023  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0271  0.0004   |
+| Median distance to closest record        :   6.1201           |
+| Hitting rate (0.03 x range(att))         :   0.0697           |
+| Epsilon identifiability risk             :   0.0146           |       
+| Privacy loss (diff. in eps. risk)        :   0.0042           |
+| Membership inference attack Classifier F1:   0.3437  0.0022   |
+|   -> Precision                           :   0.5475  0.0492   |
+|   -> Recall                              :   0.0114  0.0020   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 2, epochs 74, seed 14) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0305  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.3367           |
+| PCA angle diff. between eigenvectors     :   0.4708           |
+| Average confidence interval overlap      :   0.0915  0.0915   |
+|   -> # non-overlapping COIs at 95%       :    7               |
+|   -> fraction of non-overlapping CIs     :   0.8750           |
+| Mixed correlation matrix difference      :   3.5701           |
+| Pairwise mutual information difference   :   0.2602           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.1433  0.0326   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.1608  0.0313   |
+|       -> avg. Total Variation Distance   :   0.0034  nan   |
+|   -> average combined p-value            :   0.0614  0.0614   |
+|       -> # significant tests at a=0.05   :    8               |
+|       -> fraction of significant tests   :   0.8889           |
+| Average empirical Hellinger distance     :   0.0003  0.0003   |
+| Propensity mean squared error (pMSE)     :   0.0405  0.0006   |
+|   -> average pMSE classifier accuracy    :   0.7092  0.0028   |
+| Quantile mean squared error (qMSE)       :   0.0073  0.0042   |
+| Nearest neighbour adversarial accuracy   :   0.9269  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.6252           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4862  -0.4432  0.0036   |
+| AdaBoostClassifier      :   0.7840  0.4793  -0.3047  0.0267   |
+| SupportVectorMachine    :   0.8462  0.4093  -0.4369  0.0067   |
+| LogisticRegression      :   0.8224  0.4202  -0.4022  0.0180   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4487  -0.3967  0.0083   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5055  -0.3709           |
+| AdaBoostClassifier      :   0.8040  0.4639  -0.3401           |
+| SupportVectorMachine    :   0.8515  0.4710  -0.3805           |
+| LogisticRegression      :   0.8236  0.4353  -0.3883           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4689  -0.3700  0.0053   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8693  0.0009   |
+| Privacy loss (diff. in NNDR)             :   -0.0010  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0282  0.0005   |
+| Median distance to closest record        :   6.0559           |
+| Hitting rate (0.03 x range(att))         :   0.0713           |
+| Epsilon identifiability risk             :   0.0135           |       
+| Privacy loss (diff. in eps. risk)        :   0.0022           |
+| Membership inference attack Classifier F1:   0.3422  0.0017   |
+|   -> Precision                           :   0.5200  0.0414   |
+|   -> Recall                              :   0.0100  0.0016   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 2, epochs 74, seed 15) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0324  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.3140           |
+| PCA angle diff. between eigenvectors     :   0.4715           |
+| Average confidence interval overlap      :   0.0032  0.0032   |
+|   -> # non-overlapping COIs at 95%       :    7               |
+|   -> fraction of non-overlapping CIs     :   0.8750           |
+| Mixed correlation matrix difference      :   3.5661           |
+| Pairwise mutual information difference   :   0.2600           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.1434  0.0300   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.1597  0.0286   |
+|       -> avg. Total Variation Distance   :   0.0135  nan   |
+|   -> average combined p-value            :   0.0023  0.0023   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0011  0.0011   |
+| Propensity mean squared error (pMSE)     :   0.0404  0.0004   |
+|   -> average pMSE classifier accuracy    :   0.7090  0.0017   |
+| Quantile mean squared error (qMSE)       :   0.0071  0.0042   |
+| Nearest neighbour adversarial accuracy   :   0.9276  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.4136           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4783  -0.4511  0.0083   |
+| AdaBoostClassifier      :   0.7840  0.5347  -0.2493  0.0198   |
+| SupportVectorMachine    :   0.8462  0.4550  -0.3912  0.0079   |
+| LogisticRegression      :   0.8224  0.5027  -0.3197  0.0045   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4927  -0.3528  0.0058   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4808  -0.3956           |
+| AdaBoostClassifier      :   0.8040  0.4837  -0.3203           |
+| SupportVectorMachine    :   0.8515  0.4933  -0.3582           |
+| LogisticRegression      :   0.8236  0.5026  -0.3210           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4901  -0.3488  0.0090   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8694  0.0009   |
+| Privacy loss (diff. in NNDR)             :   -0.0010  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0274  0.0005   |
+| Median distance to closest record        :   6.0364           |
+| Hitting rate (0.03 x range(att))         :   0.0727           |
+| Epsilon identifiability risk             :   0.0138           |       
+| Privacy loss (diff. in eps. risk)        :   0.0033           |
+| Membership inference attack Classifier F1:   0.3417  0.0016   |
+|   -> Precision                           :   0.5663  0.0769   |
+|   -> Recall                              :   0.0092  0.0012   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 2, epochs 74, seed 16) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0483  0.0007   |
+| PCA difference in eigenvalues (exp. var.):   0.3349           |
+| PCA angle diff. between eigenvectors     :   0.4650           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5742           |
+| Pairwise mutual information difference   :   0.4335           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2164  0.0484   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2355  0.0504   |
+|       -> avg. Total Variation Distance   :   0.0633  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0050  0.0050   |
+| Propensity mean squared error (pMSE)     :   0.0772  0.0005   |
+|   -> average pMSE classifier accuracy    :   0.7778  0.0020   |
+| Quantile mean squared error (qMSE)       :   0.0112  0.0042   |
+| Nearest neighbour adversarial accuracy   :   0.9442  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.4613           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.5050  -0.4244  0.0059   |
+| AdaBoostClassifier      :   0.7840  0.5017  -0.2823  0.0058   |
+| SupportVectorMachine    :   0.8462  0.5018  -0.3444  0.0025   |
+| LogisticRegression      :   0.8224  0.5019  -0.3205  0.0034   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5026  -0.3429  0.0023   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4840  -0.3925           |
+| AdaBoostClassifier      :   0.8040  0.4996  -0.3044           |
+| SupportVectorMachine    :   0.8515  0.5013  -0.3501           |
+| LogisticRegression      :   0.8236  0.5018  -0.3218           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4967  -0.3422  0.0096   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8736  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0005  0.0019   |
+| Privacy loss (diff. in NNAA)             :   -0.0261  0.0004   |
+| Median distance to closest record        :   7.0549           |
+| Hitting rate (0.03 x range(att))         :   0.0050           |
+| Epsilon identifiability risk             :   0.0128           |       
+| Privacy loss (diff. in eps. risk)        :   0.0045           |
+| Membership inference attack Classifier F1:   0.3442  0.0011   |
+|   -> Precision                           :   0.6062  0.0352   |
+|   -> Recall                              :   0.0115  0.0012   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 2, epochs 74, seed 17) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0299  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.3130           |
+| PCA angle diff. between eigenvectors     :   0.4856           |
+| Average confidence interval overlap      :   0.1001  0.1001   |
+|   -> # non-overlapping COIs at 95%       :    7               |
+|   -> fraction of non-overlapping CIs     :   0.8750           |
+| Mixed correlation matrix difference      :   3.5802           |
+| Pairwise mutual information difference   :   0.2728           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.1378  0.0316   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.1546  0.0303   |
+|       -> avg. Total Variation Distance   :   0.0034  nan   |
+|   -> average combined p-value            :   0.0577  0.0577   |
+|       -> # significant tests at a=0.05   :    8               |
+|       -> fraction of significant tests   :   0.8889           |
+| Average empirical Hellinger distance     :   0.0003  0.0003   |
+| Propensity mean squared error (pMSE)     :   0.0384  0.0003   |
+|   -> average pMSE classifier accuracy    :   0.7049  0.0029   |
+| Quantile mean squared error (qMSE)       :   0.0071  0.0042   |
+| Nearest neighbour adversarial accuracy   :   0.9268  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.3617           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4756  -0.4538  0.0044   |
+| AdaBoostClassifier      :   0.7840  0.4895  -0.2944  0.0267   |
+| SupportVectorMachine    :   0.8462  0.4709  -0.3753  0.0039   |
+| LogisticRegression      :   0.8224  0.5176  -0.3048  0.0210   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4884  -0.3571  0.0086   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4916  -0.3849           |
+| AdaBoostClassifier      :   0.8040  0.4991  -0.3049           |
+| SupportVectorMachine    :   0.8515  0.4639  -0.3876           |
+| LogisticRegression      :   0.8236  0.4891  -0.3345           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4859  -0.3529  0.0101   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8647  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0011  0.0021   |
+| Privacy loss (diff. in NNAA)             :   -0.0282  0.0006   |
+| Median distance to closest record        :   6.0374           |
+| Hitting rate (0.03 x range(att))         :   0.0697           |
+| Epsilon identifiability risk             :   0.0154           |       
+| Privacy loss (diff. in eps. risk)        :   0.0045           |
+| Membership inference attack Classifier F1:   0.3393  0.0006   |
+|   -> Precision                           :   0.4964  0.0229   |
+|   -> Recall                              :   0.0068  0.0007   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 2, epochs 74, seed 18) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0264  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.3286           |
+| PCA angle diff. between eigenvectors     :   0.4555           |
+| Average confidence interval overlap      :   0.0967  0.0967   |
+|   -> # non-overlapping COIs at 95%       :    7               |
+|   -> fraction of non-overlapping CIs     :   0.8750           |
+| Mixed correlation matrix difference      :   3.5933           |
+| Pairwise mutual information difference   :   0.2294           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.1291  0.0282   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.1433  0.0275   |
+|       -> avg. Total Variation Distance   :   0.0148  nan   |
+|   -> average combined p-value            :   0.0012  0.0012   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0012  0.0012   |
+| Propensity mean squared error (pMSE)     :   0.0332  0.0006   |
+|   -> average pMSE classifier accuracy    :   0.6915  0.0012   |
+| Quantile mean squared error (qMSE)       :   0.0067  0.0042   |
+| Nearest neighbour adversarial accuracy   :   0.9261  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.5346           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4517  -0.4777  0.0108   |
+| AdaBoostClassifier      :   0.7840  0.4526  -0.3314  0.0081   |
+| SupportVectorMachine    :   0.8462  0.4712  -0.3750  0.0049   |
+| LogisticRegression      :   0.8224  0.4865  -0.3359  0.0066   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4655  -0.3800  0.0040   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4644  -0.4120           |
+| AdaBoostClassifier      :   0.8040  0.4284  -0.3756           |
+| SupportVectorMachine    :   0.8515  0.4333  -0.4182           |
+| LogisticRegression      :   0.8236  0.4128  -0.4108           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4347  -0.4041  0.0048   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8701  0.0009   |
+| Privacy loss (diff. in NNDR)             :   -0.0003  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0302  0.0004   |
+| Median distance to closest record        :   5.8956           |
+| Hitting rate (0.03 x range(att))         :   0.0833           |
+| Epsilon identifiability risk             :   0.0143           |       
+| Privacy loss (diff. in eps. risk)        :   0.0031           |
+| Membership inference attack Classifier F1:   0.3412  0.0019   |
+|   -> Precision                           :   0.4858  0.0528   |
+|   -> Recall                              :   0.0090  0.0017   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 2, epochs 74, seed 19) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0556  0.0007   |
+| PCA difference in eigenvalues (exp. var.):   0.2917           |
+| PCA angle diff. between eigenvectors     :   0.8974           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5935           |
+| Pairwise mutual information difference   :   0.4287           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2364  0.0434   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2602  0.0412   |
+|       -> avg. Total Variation Distance   :   0.0464  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0036  0.0036   |
+| Propensity mean squared error (pMSE)     :   0.0763  0.0009   |
+|   -> average pMSE classifier accuracy    :   0.7759  0.0031   |
+| Quantile mean squared error (qMSE)       :   0.0118  0.0041   |
+| Nearest neighbour adversarial accuracy   :   0.9473  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.3748           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4971  -0.4323  0.0070   |
+| AdaBoostClassifier      :   0.7840  0.5028  -0.2812  0.0063   |
+| SupportVectorMachine    :   0.8462  0.5005  -0.3457  0.0026   |
+| LogisticRegression      :   0.8224  0.5023  -0.3201  0.0034   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5007  -0.3448  0.0026   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5089  -0.3675           |
+| AdaBoostClassifier      :   0.8040  0.4955  -0.3085           |
+| SupportVectorMachine    :   0.8515  0.5013  -0.3501           |
+| LogisticRegression      :   0.8236  0.5013  -0.3222           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5018  -0.3371  0.0067   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8798  0.0008   |
+| Privacy loss (diff. in NNDR)             :   0.0013  0.0018   |
+| Privacy loss (diff. in NNAA)             :   -0.0233  0.0005   |
+| Median distance to closest record        :   7.1443           |
+| Hitting rate (0.03 x range(att))         :   0.0038           |
+| Epsilon identifiability risk             :   0.0138           |       
+| Privacy loss (diff. in eps. risk)        :   0.0037           |
+| Membership inference attack Classifier F1:   0.3415  0.0025   |
+|   -> Precision                           :   0.4975  0.0707   |
+|   -> Recall                              :   0.0092  0.0023   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 3, epochs 143, seed 10) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0547  0.0007   |
+| PCA difference in eigenvalues (exp. var.):   0.2991           |
+| PCA angle diff. between eigenvectors     :   0.9049           |
+| Average confidence interval overlap      :   0.0435  0.0435   |
+|   -> # non-overlapping COIs at 95%       :    7               |
+|   -> fraction of non-overlapping CIs     :   0.8750           |
+| Mixed correlation matrix difference      :   3.5854           |
+| Pairwise mutual information difference   :   0.3857           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2284  0.0446   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2536  0.0418   |
+|       -> avg. Total Variation Distance   :   0.0267  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0021  0.0021   |
+| Propensity mean squared error (pMSE)     :   0.0817  0.0006   |
+|   -> average pMSE classifier accuracy    :   0.7854  0.0018   |
+| Quantile mean squared error (qMSE)       :   0.0115  0.0040   |
+| Nearest neighbour adversarial accuracy   :   0.9502  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.2353           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.5097  -0.4197  0.0152   |
+| AdaBoostClassifier      :   0.7840  0.5372  -0.2468  0.0113   |
+| SupportVectorMachine    :   0.8462  0.5582  -0.2880  0.0061   |
+| LogisticRegression      :   0.8224  0.5020  -0.3204  0.0039   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5268  -0.3187  0.0051   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5263  -0.3501           |
+| AdaBoostClassifier      :   0.8040  0.5840  -0.2200           |
+| SupportVectorMachine    :   0.8515  0.5053  -0.3462           |
+| LogisticRegression      :   0.8236  0.5197  -0.3039           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5338  -0.3051  0.0151   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8746  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0011  0.0019   |
+| Privacy loss (diff. in NNAA)             :   -0.0250  0.0003   |
+| Median distance to closest record        :   7.0335           |
+| Hitting rate (0.03 x range(att))         :   0.0063           |
+| Epsilon identifiability risk             :   0.0136           |       
+| Privacy loss (diff. in eps. risk)        :   0.0042           |
+| Membership inference attack Classifier F1:   0.3390  0.0007   |
+|   -> Precision                           :   0.5120  0.0360   |
+|   -> Recall                              :   0.0065  0.0007   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 3, epochs 143, seed 11) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0188  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.3230           |
+| PCA angle diff. between eigenvectors     :   0.9745           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5561           |
+| Pairwise mutual information difference   :   0.5176           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.0860  0.0190   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.0960  0.0183   |
+|       -> avg. Total Variation Distance   :   0.0061  nan   |
+|   -> average combined p-value            :   0.0329  0.0329   |
+|       -> # significant tests at a=0.05   :    8               |
+|       -> fraction of significant tests   :   0.8889           |
+| Average empirical Hellinger distance     :   0.0005  0.0005   |
+| Propensity mean squared error (pMSE)     :   0.0087  0.0003   |
+|   -> average pMSE classifier accuracy    :   0.5727  0.0026   |
+| Quantile mean squared error (qMSE)       :   0.0055  0.0043   |
+| Nearest neighbour adversarial accuracy   :   0.9144  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.5417           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4796  -0.4498  0.0065   |
+| AdaBoostClassifier      :   0.7840  0.4982  -0.2858  0.0104   |
+| SupportVectorMachine    :   0.8462  0.4650  -0.3812  0.0088   |
+| LogisticRegression      :   0.8224  0.3784  -0.4440  0.0094   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4553  -0.3902  0.0045   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4974  -0.3790           |
+| AdaBoostClassifier      :   0.8040  0.4042  -0.3998           |
+| SupportVectorMachine    :   0.8515  0.4502  -0.4013           |
+| LogisticRegression      :   0.8236  0.4306  -0.3930           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4456  -0.3933  0.0025   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8740  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0035  0.0019   |
+| Privacy loss (diff. in NNAA)             :   -0.0274  0.0005   |
+| Median distance to closest record        :   4.1745           |
+| Hitting rate (0.03 x range(att))         :   0.2558           |
+| Epsilon identifiability risk             :   0.0257           |       
+| Privacy loss (diff. in eps. risk)        :   0.0042           |
+| Membership inference attack Classifier F1:   0.3410  0.0028   |
+|   -> Precision                           :   0.4072  0.0911   |
+|   -> Recall                              :   0.0100  0.0023   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 3, epochs 143, seed 12) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0194  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.3312           |
+| PCA angle diff. between eigenvectors     :   0.8972           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5553           |
+| Pairwise mutual information difference   :   0.5219           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.0893  0.0182   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.0986  0.0177   |
+|       -> avg. Total Variation Distance   :   0.0149  nan   |
+|   -> average combined p-value            :   0.0009  0.0009   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0012  0.0012   |
+| Propensity mean squared error (pMSE)     :   0.0090  0.0003   |
+|   -> average pMSE classifier accuracy    :   0.6061  0.0024   |
+| Quantile mean squared error (qMSE)       :   0.0055  0.0043   |
+| Nearest neighbour adversarial accuracy   :   0.9153  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.4832           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.5293  -0.4001  0.0066   |
+| AdaBoostClassifier      :   0.7840  0.5830  -0.2010  0.0102   |
+| SupportVectorMachine    :   0.8462  0.5642  -0.2820  0.0066   |
+| LogisticRegression      :   0.8224  0.5640  -0.2584  0.0210   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5601  -0.2854  0.0063   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4918  -0.3846           |
+| AdaBoostClassifier      :   0.8040  0.4808  -0.3232           |
+| SupportVectorMachine    :   0.8515  0.4857  -0.3658           |
+| LogisticRegression      :   0.8236  0.4522  -0.3714           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4776  -0.3613  0.0066   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8768  0.0009   |
+| Privacy loss (diff. in NNDR)             :   -0.0009  0.0019   |
+| Privacy loss (diff. in NNAA)             :   -0.0284  0.0006   |
+| Median distance to closest record        :   4.2886           |
+| Hitting rate (0.03 x range(att))         :   0.2524           |
+| Epsilon identifiability risk             :   0.0239           |       
+| Privacy loss (diff. in eps. risk)        :   0.0054           |
+| Membership inference attack Classifier F1:   0.3413  0.0025   |
+|   -> Precision                           :   0.3916  0.0640   |
+|   -> Recall                              :   0.0106  0.0022   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 3, epochs 143, seed 13) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0194  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.3156           |
+| PCA angle diff. between eigenvectors     :   0.9426           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5680           |
+| Pairwise mutual information difference   :   0.4684           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.0902  0.0156   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.0968  0.0160   |
+|       -> avg. Total Variation Distance   :   0.0370  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0029  0.0029   |
+| Propensity mean squared error (pMSE)     :   0.0086  0.0004   |
+|   -> average pMSE classifier accuracy    :   0.5839  0.0039   |
+| Quantile mean squared error (qMSE)       :   0.0055  0.0044   |
+| Nearest neighbour adversarial accuracy   :   0.9133  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.4159           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.5172  -0.4122  0.0069   |
+| AdaBoostClassifier      :   0.7840  0.5010  -0.2829  0.0056   |
+| SupportVectorMachine    :   0.8462  0.5147  -0.3315  0.0061   |
+| LogisticRegression      :   0.8224  0.5009  -0.3215  0.0034   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5084  -0.3371  0.0028   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4955  -0.3810           |
+| AdaBoostClassifier      :   0.8040  0.5011  -0.3029           |
+| SupportVectorMachine    :   0.8515  0.5016  -0.3499           |
+| LogisticRegression      :   0.8236  0.5013  -0.3222           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4999  -0.3390  0.0085   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8755  0.0009   |
+| Privacy loss (diff. in NNDR)             :   -0.0038  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0290  0.0006   |
+| Median distance to closest record        :   4.2709           |
+| Hitting rate (0.03 x range(att))         :   0.2475           |
+| Epsilon identifiability risk             :   0.0244           |       
+| Privacy loss (diff. in eps. risk)        :   0.0057           |
+| Membership inference attack Classifier F1:   0.3455  0.0017   |
+|   -> Precision                           :   0.5139  0.0345   |
+|   -> Recall                              :   0.0139  0.0015   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 3, epochs 143, seed 14) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0192  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.2757           |
+| PCA angle diff. between eigenvectors     :   0.9143           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5414           |
+| Pairwise mutual information difference   :   0.5910           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.0932  0.0177   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.1035  0.0162   |
+|       -> avg. Total Variation Distance   :   0.0103  nan   |
+|   -> average combined p-value            :   0.0074  0.0074   |
+|       -> # significant tests at a=0.05   :    8               |
+|       -> fraction of significant tests   :   0.8889           |
+| Average empirical Hellinger distance     :   0.0008  0.0008   |
+| Propensity mean squared error (pMSE)     :   0.0095  0.0003   |
+|   -> average pMSE classifier accuracy    :   0.5774  0.0018   |
+| Quantile mean squared error (qMSE)       :   0.0057  0.0043   |
+| Nearest neighbour adversarial accuracy   :   0.9142  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.1453           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.5207  -0.4087  0.0105   |
+| AdaBoostClassifier      :   0.7840  0.5867  -0.1973  0.0119   |
+| SupportVectorMachine    :   0.8462  0.5502  -0.2960  0.0091   |
+| LogisticRegression      :   0.8224  0.6110  -0.2114  0.0100   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5672  -0.2783  0.0052   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5307  -0.3457           |
+| AdaBoostClassifier      :   0.8040  0.5009  -0.3032           |
+| SupportVectorMachine    :   0.8515  0.5312  -0.3203           |
+| LogisticRegression      :   0.8236  0.5716  -0.2520           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5336  -0.3053  0.0099   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8746  0.0009   |
+| Privacy loss (diff. in NNDR)             :   -0.0039  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0296  0.0006   |
+| Median distance to closest record        :   4.1757           |
+| Hitting rate (0.03 x range(att))         :   0.2572           |
+| Epsilon identifiability risk             :   0.0263           |       
+| Privacy loss (diff. in eps. risk)        :   0.0069           |
+| Membership inference attack Classifier F1:   0.3443  0.0023   |
+|   -> Precision                           :   0.4832  0.0622   |
+|   -> Recall                              :   0.0129  0.0020   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 3, epochs 143, seed 15) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0278  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.3464           |
+| PCA angle diff. between eigenvectors     :   0.4382           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5466           |
+| Pairwise mutual information difference   :   0.4780           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.1245  0.0171   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.1330  0.0168   |
+|       -> avg. Total Variation Distance   :   0.0560  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0044  0.0044   |
+| Propensity mean squared error (pMSE)     :   0.0186  0.0004   |
+|   -> average pMSE classifier accuracy    :   0.6135  0.0022   |
+| Quantile mean squared error (qMSE)       :   0.0063  0.0043   |
+| Nearest neighbour adversarial accuracy   :   0.9217  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.4409           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4870  -0.4424  0.0058   |
+| AdaBoostClassifier      :   0.7840  0.5026  -0.2814  0.0079   |
+| SupportVectorMachine    :   0.8462  0.4983  -0.3479  0.0025   |
+| LogisticRegression      :   0.8224  0.4979  -0.3245  0.0034   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4965  -0.3490  0.0027   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5080  -0.3685           |
+| AdaBoostClassifier      :   0.8040  0.5038  -0.3002           |
+| SupportVectorMachine    :   0.8515  0.4987  -0.3528           |
+| LogisticRegression      :   0.8236  0.4987  -0.3249           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5023  -0.3366  0.0076   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8749  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0005  0.0019   |
+| Privacy loss (diff. in NNAA)             :   -0.0251  0.0005   |
+| Median distance to closest record        :   4.3224           |
+| Hitting rate (0.03 x range(att))         :   0.2401           |
+| Epsilon identifiability risk             :   0.0221           |       
+| Privacy loss (diff. in eps. risk)        :   0.0051           |
+| Membership inference attack Classifier F1:   0.3451  0.0008   |
+|   -> Precision                           :   0.5982  0.0159   |
+|   -> Recall                              :   0.0125  0.0008   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 3, epochs 143, seed 16) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0245  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.3280           |
+| PCA angle diff. between eigenvectors     :   0.4776           |
+| Average confidence interval overlap      :   0.1226  0.1226   |
+|   -> # non-overlapping COIs at 95%       :    7               |
+|   -> fraction of non-overlapping CIs     :   0.8750           |
+| Mixed correlation matrix difference      :   3.5911           |
+| Pairwise mutual information difference   :   0.1827           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.1300  0.0328   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.1458  0.0326   |
+|       -> avg. Total Variation Distance   :   0.0034  nan   |
+|   -> average combined p-value            :   0.0623  0.0621   |
+|       -> # significant tests at a=0.05   :    8               |
+|       -> fraction of significant tests   :   0.8889           |
+| Average empirical Hellinger distance     :   0.0003  0.0003   |
+| Propensity mean squared error (pMSE)     :   0.0335  0.0007   |
+|   -> average pMSE classifier accuracy    :   0.6947  0.0051   |
+| Quantile mean squared error (qMSE)       :   0.0068  0.0042   |
+| Nearest neighbour adversarial accuracy   :   0.9258  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.2542           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.5212  -0.4082  0.0123   |
+| AdaBoostClassifier      :   0.7840  0.5174  -0.2666  0.0197   |
+| SupportVectorMachine    :   0.8462  0.5087  -0.3375  0.0147   |
+| LogisticRegression      :   0.8224  0.5083  -0.3141  0.0091   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5139  -0.3316  0.0072   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5126  -0.3638           |
+| AdaBoostClassifier      :   0.8040  0.6467  -0.1573           |
+| SupportVectorMachine    :   0.8515  0.5672  -0.2843           |
+| LogisticRegression      :   0.8236  0.5894  -0.2342           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5790  -0.2599  0.0217   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8721  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0028  0.0019   |
+| Privacy loss (diff. in NNAA)             :   -0.0293  0.0006   |
+| Median distance to closest record        :   5.8348           |
+| Hitting rate (0.03 x range(att))         :   0.1042           |
+| Epsilon identifiability risk             :   0.0137           |       
+| Privacy loss (diff. in eps. risk)        :   0.0028           |
+| Membership inference attack Classifier F1:   0.3440  0.0016   |
+|   -> Precision                           :   0.5547  0.0432   |
+|   -> Recall                              :   0.0117  0.0015   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 3, epochs 143, seed 17) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0154  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.3035           |
+| PCA angle diff. between eigenvectors     :   0.9318           |
+| Average confidence interval overlap      :   0.0460  0.0460   |
+|   -> # non-overlapping COIs at 95%       :    7               |
+|   -> fraction of non-overlapping CIs     :   0.8750           |
+| Mixed correlation matrix difference      :   3.5546           |
+| Pairwise mutual information difference   :   0.4674           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.0798  0.0146   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.0875  0.0140   |
+|       -> avg. Total Variation Distance   :   0.0182  nan   |
+|   -> average combined p-value            :   0.0003  0.0003   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0014  0.0014   |
+| Propensity mean squared error (pMSE)     :   0.0062  0.0004   |
+|   -> average pMSE classifier accuracy    :   0.5715  0.0036   |
+| Quantile mean squared error (qMSE)       :   0.0054  0.0043   |
+| Nearest neighbour adversarial accuracy   :   0.9125  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.4313           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4853  -0.4441  0.0075   |
+| AdaBoostClassifier      :   0.7840  0.4356  -0.3483  0.0142   |
+| SupportVectorMachine    :   0.8462  0.5010  -0.3452  0.0055   |
+| LogisticRegression      :   0.8224  0.4547  -0.3677  0.0107   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4692  -0.3763  0.0050   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4925  -0.3839           |
+| AdaBoostClassifier      :   0.8040  0.4644  -0.3396           |
+| SupportVectorMachine    :   0.8515  0.4933  -0.3582           |
+| LogisticRegression      :   0.8236  0.5021  -0.3215           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4881  -0.3508  0.0067   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8744  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0008  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0286  0.0006   |
+| Median distance to closest record        :   4.3516           |
+| Hitting rate (0.03 x range(att))         :   0.2518           |
+| Epsilon identifiability risk             :   0.0267           |       
+| Privacy loss (diff. in eps. risk)        :   0.0056           |
+| Membership inference attack Classifier F1:   0.3433  0.0013   |
+|   -> Precision                           :   0.5157  0.0671   |
+|   -> Recall                              :   0.0115  0.0010   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 3, epochs 143, seed 18) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0180  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.3206           |
+| PCA angle diff. between eigenvectors     :   0.9593           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5597           |
+| Pairwise mutual information difference   :   0.3988           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.0857  0.0140   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.0945  0.0123   |
+|       -> avg. Total Variation Distance   :   0.0148  nan   |
+|   -> average combined p-value            :   0.0009  0.0009   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0012  0.0012   |
+| Propensity mean squared error (pMSE)     :   0.0087  0.0003   |
+|   -> average pMSE classifier accuracy    :   0.5868  0.0023   |
+| Quantile mean squared error (qMSE)       :   0.0054  0.0043   |
+| Nearest neighbour adversarial accuracy   :   0.9161  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.3291           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4859  -0.4435  0.0068   |
+| AdaBoostClassifier      :   0.7840  0.4944  -0.2896  0.0166   |
+| SupportVectorMachine    :   0.8462  0.4677  -0.3785  0.0113   |
+| LogisticRegression      :   0.8224  0.5238  -0.2986  0.0088   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4930  -0.3525  0.0057   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5256  -0.3509           |
+| AdaBoostClassifier      :   0.8040  0.5647  -0.2393           |
+| SupportVectorMachine    :   0.8515  0.4715  -0.3800           |
+| LogisticRegression      :   0.8236  0.5393  -0.2843           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5253  -0.3136  0.0159   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8729  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0008  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0306  0.0006   |
+| Median distance to closest record        :   4.4626           |
+| Hitting rate (0.03 x range(att))         :   0.2443           |
+| Epsilon identifiability risk             :   0.0236           |       
+| Privacy loss (diff. in eps. risk)        :   0.0050           |
+| Membership inference attack Classifier F1:   0.3442  0.0025   |
+|   -> Precision                           :   0.5257  0.0601   |
+|   -> Recall                              :   0.0121  0.0022   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 3, epochs 143, seed 19) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0505  0.0007   |
+| PCA difference in eigenvalues (exp. var.):   0.3009           |
+| PCA angle diff. between eigenvectors     :   0.8932           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.6016           |
+| Pairwise mutual information difference   :   0.3645           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2433  0.0411   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2641  0.0402   |
+|       -> avg. Total Variation Distance   :   0.0771  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0061  0.0061   |
+| Propensity mean squared error (pMSE)     :   0.0772  0.0005   |
+|   -> average pMSE classifier accuracy    :   0.7787  0.0013   |
+| Quantile mean squared error (qMSE)       :   0.0123  0.0041   |
+| Nearest neighbour adversarial accuracy   :   0.9549  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.4141           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4913  -0.4381  0.0111   |
+| AdaBoostClassifier      :   0.7840  0.5002  -0.2838  0.0050   |
+| SupportVectorMachine    :   0.8462  0.4983  -0.3479  0.0025   |
+| LogisticRegression      :   0.8224  0.4983  -0.3241  0.0034   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4970  -0.3484  0.0032   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5062  -0.3702           |
+| AdaBoostClassifier      :   0.8040  0.4982  -0.3058           |
+| SupportVectorMachine    :   0.8515  0.4987  -0.3528           |
+| LogisticRegression      :   0.8236  0.4987  -0.3249           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5004  -0.3385  0.0072   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8817  0.0008   |
+| Privacy loss (diff. in NNDR)             :   -0.0032  0.0018   |
+| Privacy loss (diff. in NNAA)             :   -0.0227  0.0004   |
+| Median distance to closest record        :   7.1039           |
+| Hitting rate (0.03 x range(att))         :   0.0048           |
+| Epsilon identifiability risk             :   0.0130           |       
+| Privacy loss (diff. in eps. risk)        :   0.0032           |
+| Membership inference attack Classifier F1:   0.3397  0.0011   |
+|   -> Precision                           :   0.4585  0.0470   |
+|   -> Recall                              :   0.0076  0.0011   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 4, epochs 244, seed 10) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0370  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.3315           |
+| PCA angle diff. between eigenvectors     :   0.4691           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.6078           |
+| Pairwise mutual information difference   :   0.9678           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2341  0.0358   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2407  0.0399   |
+|       -> avg. Total Variation Distance   :   0.1818  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0146  0.0146   |
+| Propensity mean squared error (pMSE)     :   0.0704  0.0007   |
+|   -> average pMSE classifier accuracy    :   0.7685  0.0013   |
+| Quantile mean squared error (qMSE)       :   0.0120  0.0047   |
+| Nearest neighbour adversarial accuracy   :   0.9589  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.5607           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4992  -0.4302  0.0038   |
+| AdaBoostClassifier      :   0.7840  0.5002  -0.2838  0.0049   |
+| SupportVectorMachine    :   0.8462  0.5017  -0.3445  0.0025   |
+| LogisticRegression      :   0.8224  0.5017  -0.3208  0.0034   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5007  -0.3448  0.0019   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4979  -0.3785           |
+| AdaBoostClassifier      :   0.8040  0.5018  -0.3022           |
+| SupportVectorMachine    :   0.8515  0.5013  -0.3501           |
+| LogisticRegression      :   0.8236  0.5013  -0.3222           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5006  -0.3383  0.0083   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8782  0.0008   |
+| Privacy loss (diff. in NNDR)             :   -0.0010  0.0019   |
+| Privacy loss (diff. in NNAA)             :   -0.0188  0.0004   |
+| Median distance to closest record        :   6.3987           |
+| Hitting rate (0.03 x range(att))         :   0.0124           |
+| Epsilon identifiability risk             :   0.0135           |       
+| Privacy loss (diff. in eps. risk)        :   0.0031           |
+| Membership inference attack Classifier F1:   0.3378  0.0011   |
+|   -> Precision                           :   0.4560  0.0426   |
+|   -> Recall                              :   0.0053  0.0010   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 4, epochs 244, seed 11) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0100  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.2766           |
+| PCA angle diff. between eigenvectors     :   0.9462           |
+| Average confidence interval overlap      :   0.0572  0.0572   |
+|   -> # non-overlapping COIs at 95%       :    7               |
+|   -> fraction of non-overlapping CIs     :   0.8750           |
+| Mixed correlation matrix difference      :   3.5647           |
+| Pairwise mutual information difference   :   0.3158           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.0504  0.0087   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.0561  0.0075   |
+|       -> avg. Total Variation Distance   :   0.0049  nan   |
+|   -> average combined p-value            :   0.0430  0.0430   |
+|       -> # significant tests at a=0.05   :    8               |
+|       -> fraction of significant tests   :   0.8889           |
+| Average empirical Hellinger distance     :   0.0004  0.0004   |
+| Propensity mean squared error (pMSE)     :   0.0041  0.0002   |
+|   -> average pMSE classifier accuracy    :   0.5836  0.0012   |
+| Quantile mean squared error (qMSE)       :   0.0047  0.0044   |
+| Nearest neighbour adversarial accuracy   :   0.9059  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.3550           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.5054  -0.4240  0.0064   |
+| AdaBoostClassifier      :   0.7840  0.5345  -0.2495  0.0280   |
+| SupportVectorMachine    :   0.8462  0.5013  -0.3449  0.0104   |
+| LogisticRegression      :   0.8224  0.6032  -0.2192  0.0214   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5361  -0.3094  0.0093   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5040  -0.3724           |
+| AdaBoostClassifier      :   0.8040  0.4950  -0.3090           |
+| SupportVectorMachine    :   0.8515  0.5265  -0.3249           |
+| LogisticRegression      :   0.8236  0.5153  -0.3083           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5102  -0.3287  0.0075   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8699  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0012  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0328  0.0006   |
+| Median distance to closest record        :   4.7676           |
+| Hitting rate (0.03 x range(att))         :   0.2231           |
+| Epsilon identifiability risk             :   0.0245           |       
+| Privacy loss (diff. in eps. risk)        :   0.0065           |
+| Membership inference attack Classifier F1:   0.3396  0.0008   |
+|   -> Precision                           :   0.4025  0.0404   |
+|   -> Recall                              :   0.0084  0.0007   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 4, epochs 244, seed 12) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0096  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.2639           |
+| PCA angle diff. between eigenvectors     :   0.9518           |
+| Average confidence interval overlap      :   0.0507  0.0474   |
+|   -> # non-overlapping COIs at 95%       :    6               |
+|   -> fraction of non-overlapping CIs     :   0.7500           |
+| Mixed correlation matrix difference      :   3.5604           |
+| Pairwise mutual information difference   :   0.3468           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.0515  0.0090   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.0562  0.0087   |
+|       -> avg. Total Variation Distance   :   0.0141  nan   |
+|   -> average combined p-value            :   0.0013  0.0013   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0011  0.0011   |
+| Propensity mean squared error (pMSE)     :   0.0050  0.0002   |
+|   -> average pMSE classifier accuracy    :   0.5902  0.0009   |
+| Quantile mean squared error (qMSE)       :   0.0047  0.0044   |
+| Nearest neighbour adversarial accuracy   :   0.9029  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.5784           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4909  -0.4385  0.0059   |
+| AdaBoostClassifier      :   0.7840  0.4407  -0.3433  0.0283   |
+| SupportVectorMachine    :   0.8462  0.5375  -0.3087  0.0113   |
+| LogisticRegression      :   0.8224  0.4412  -0.3812  0.0117   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4776  -0.3679  0.0083   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4536  -0.4228           |
+| AdaBoostClassifier      :   0.8040  0.4509  -0.3531           |
+| SupportVectorMachine    :   0.8515  0.4705  -0.3810           |
+| LogisticRegression      :   0.8236  0.4717  -0.3518           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4617  -0.3772  0.0083   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8720  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0004  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0278  0.0005   |
+| Median distance to closest record        :   4.7193           |
+| Hitting rate (0.03 x range(att))         :   0.2177           |
+| Epsilon identifiability risk             :   0.0240           |       
+| Privacy loss (diff. in eps. risk)        :   0.0045           |
+| Membership inference attack Classifier F1:   0.3416  0.0022   |
+|   -> Precision                           :   0.4377  0.0719   |
+|   -> Recall                              :   0.0104  0.0017   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 4, epochs 244, seed 13) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0117  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.2837           |
+| PCA angle diff. between eigenvectors     :   0.9647           |
+| Average confidence interval overlap      :   0.0881  0.0881   |
+|   -> # non-overlapping COIs at 95%       :    7               |
+|   -> fraction of non-overlapping CIs     :   0.8750           |
+| Mixed correlation matrix difference      :   3.5627           |
+| Pairwise mutual information difference   :   0.3325           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.0536  0.0082   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.0584  0.0076   |
+|       -> avg. Total Variation Distance   :   0.0155  nan   |
+|   -> average combined p-value            :   0.0009  0.0009   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0012  0.0012   |
+| Propensity mean squared error (pMSE)     :   0.0060  0.0002   |
+|   -> average pMSE classifier accuracy    :   0.5814  0.0026   |
+| Quantile mean squared error (qMSE)       :   0.0048  0.0044   |
+| Nearest neighbour adversarial accuracy   :   0.9063  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.4472           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4780  -0.4514  0.0053   |
+| AdaBoostClassifier      :   0.7840  0.4098  -0.3742  0.0296   |
+| SupportVectorMachine    :   0.8462  0.4492  -0.3970  0.0063   |
+| LogisticRegression      :   0.8224  0.4455  -0.3769  0.0065   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4456  -0.3999  0.0078   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5133  -0.3631           |
+| AdaBoostClassifier      :   0.8040  0.5265  -0.2775           |
+| SupportVectorMachine    :   0.8515  0.5332  -0.3183           |
+| LogisticRegression      :   0.8236  0.4801  -0.3435           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5133  -0.3256  0.0092   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8725  0.0009   |
+| Privacy loss (diff. in NNDR)             :   -0.0000  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0324  0.0007   |
+| Median distance to closest record        :   4.7982           |
+| Hitting rate (0.03 x range(att))         :   0.2336           |
+| Epsilon identifiability risk             :   0.0209           |       
+| Privacy loss (diff. in eps. risk)        :   0.0043           |
+| Membership inference attack Classifier F1:   0.3455  0.0022   |
+|   -> Precision                           :   0.5434  0.0297   |
+|   -> Recall                              :   0.0135  0.0022   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 4, epochs 244, seed 14) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0101  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.3004           |
+| PCA angle diff. between eigenvectors     :   0.9097           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5358           |
+| Pairwise mutual information difference   :   0.5641           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.0711  0.0063   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.0729  0.0068   |
+|       -> avg. Total Variation Distance   :   0.0565  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0044  0.0044   |
+| Propensity mean squared error (pMSE)     :   0.0049  0.0002   |
+|   -> average pMSE classifier accuracy    :   0.5582  0.0020   |
+| Quantile mean squared error (qMSE)       :   0.0052  0.0044   |
+| Nearest neighbour adversarial accuracy   :   0.9100  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.3280           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.5187  -0.4107  0.0094   |
+| AdaBoostClassifier      :   0.7840  0.5072  -0.2768  0.0073   |
+| SupportVectorMachine    :   0.8462  0.4980  -0.3482  0.0025   |
+| LogisticRegression      :   0.8224  0.4966  -0.3258  0.0034   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5051  -0.3404  0.0032   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5395  -0.3369           |
+| AdaBoostClassifier      :   0.8040  0.4989  -0.3051           |
+| SupportVectorMachine    :   0.8515  0.4987  -0.3528           |
+| LogisticRegression      :   0.8236  0.4987  -0.3249           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5089  -0.3299  0.0050   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8742  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0022  0.0019   |
+| Privacy loss (diff. in NNAA)             :   -0.0301  0.0005   |
+| Median distance to closest record        :   4.6365           |
+| Hitting rate (0.03 x range(att))         :   0.2632           |
+| Epsilon identifiability risk             :   0.0252           |       
+| Privacy loss (diff. in eps. risk)        :   0.0051           |
+| Membership inference attack Classifier F1:   0.3437  0.0018   |
+|   -> Precision                           :   0.4709  0.0323   |
+|   -> Recall                              :   0.0123  0.0017   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 4, epochs 244, seed 15) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0487  0.0005   |
+| PCA difference in eigenvalues (exp. var.):   0.2993           |
+| PCA angle diff. between eigenvectors     :   0.9180           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5351           |
+| Pairwise mutual information difference   :   1.4483           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2116  0.0540   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2366  0.0543   |
+|       -> avg. Total Variation Distance   :   0.0116  nan   |
+|   -> average combined p-value            :   0.0040  0.0040   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0009  0.0009   |
+| Propensity mean squared error (pMSE)     :   0.0479  0.0003   |
+|   -> average pMSE classifier accuracy    :   0.6647  0.0045   |
+| Quantile mean squared error (qMSE)       :   0.0119  0.0046   |
+| Nearest neighbour adversarial accuracy   :   0.9476  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.3814           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.5077  -0.4217  0.0130   |
+| AdaBoostClassifier      :   0.7840  0.4763  -0.3077  0.0182   |
+| SupportVectorMachine    :   0.8462  0.4921  -0.3541  0.0041   |
+| LogisticRegression      :   0.8224  0.4835  -0.3389  0.0088   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4899  -0.3556  0.0061   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4891  -0.3873           |
+| AdaBoostClassifier      :   0.8040  0.5182  -0.2858           |
+| SupportVectorMachine    :   0.8515  0.4996  -0.3518           |
+| LogisticRegression      :   0.8236  0.5153  -0.3083           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5056  -0.3333  0.0113   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8802  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0007  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0174  0.0004   |
+| Median distance to closest record        :   2.2342           |
+| Hitting rate (0.03 x range(att))         :   0.2261           |
+| Epsilon identifiability risk             :   0.0411           |       
+| Privacy loss (diff. in eps. risk)        :   0.0147           |
+| Membership inference attack Classifier F1:   0.3500  0.0024   |
+|   -> Precision                           :   0.5277  0.0449   |
+|   -> Recall                              :   0.0190  0.0021   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 4, epochs 244, seed 16) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0063  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.2907           |
+| PCA angle diff. between eigenvectors     :   0.9253           |
+| Average confidence interval overlap      :   0.1563  0.1024   |
+|   -> # non-overlapping COIs at 95%       :    6               |
+|   -> fraction of non-overlapping CIs     :   0.7500           |
+| Mixed correlation matrix difference      :   3.5593           |
+| Pairwise mutual information difference   :   0.5006           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.0462  0.0067   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.0511  0.0051   |
+|       -> avg. Total Variation Distance   :   0.0069  nan   |
+|   -> average combined p-value            :   0.0243  0.0243   |
+|       -> # significant tests at a=0.05   :    8               |
+|       -> fraction of significant tests   :   0.8889           |
+| Average empirical Hellinger distance     :   0.0005  0.0005   |
+| Propensity mean squared error (pMSE)     :   0.0026  0.0002   |
+|   -> average pMSE classifier accuracy    :   0.5525  0.0021   |
+| Quantile mean squared error (qMSE)       :   0.0048  0.0044   |
+| Nearest neighbour adversarial accuracy   :   0.9021  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.2598           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4895  -0.4399  0.0089   |
+| AdaBoostClassifier      :   0.7840  0.4474  -0.3365  0.0469   |
+| SupportVectorMachine    :   0.8462  0.4347  -0.4115  0.0063   |
+| LogisticRegression      :   0.8224  0.4065  -0.4159  0.0202   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4446  -0.4009  0.0131   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5062  -0.3702           |
+| AdaBoostClassifier      :   0.8040  0.5351  -0.2689           |
+| SupportVectorMachine    :   0.8515  0.5128  -0.3386           |
+| LogisticRegression      :   0.8236  0.5598  -0.2638           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5285  -0.3104  0.0131   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8734  0.0009   |
+| Privacy loss (diff. in NNDR)             :   -0.0013  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0312  0.0006   |
+| Median distance to closest record        :   4.4416           |
+| Hitting rate (0.03 x range(att))         :   0.2617           |
+| Epsilon identifiability risk             :   0.0241           |       
+| Privacy loss (diff. in eps. risk)        :   0.0050           |
+| Membership inference attack Classifier F1:   0.3436  0.0012   |
+|   -> Precision                           :   0.4733  0.0347   |
+|   -> Recall                              :   0.0123  0.0011   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 4, epochs 244, seed 17) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0101  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.2798           |
+| PCA angle diff. between eigenvectors     :   0.9634           |
+| Average confidence interval overlap      :   0.0900  0.0645   |
+|   -> # non-overlapping COIs at 95%       :    6               |
+|   -> fraction of non-overlapping CIs     :   0.7500           |
+| Mixed correlation matrix difference      :   3.5529           |
+| Pairwise mutual information difference   :   0.3374           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.0529  0.0092   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.0558  0.0099   |
+|       -> avg. Total Variation Distance   :   0.0298  nan   |
+|   -> average combined p-value            :   0.0002  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0023  0.0023   |
+| Propensity mean squared error (pMSE)     :   0.0058  0.0003   |
+|   -> average pMSE classifier accuracy    :   0.5922  0.0020   |
+| Quantile mean squared error (qMSE)       :   0.0048  0.0044   |
+| Nearest neighbour adversarial accuracy   :   0.9073  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.4829           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4991  -0.4303  0.0080   |
+| AdaBoostClassifier      :   0.7840  0.4945  -0.2895  0.0096   |
+| SupportVectorMachine    :   0.8462  0.4858  -0.3604  0.0029   |
+| LogisticRegression      :   0.8224  0.5028  -0.3196  0.0034   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4955  -0.3499  0.0033   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4808  -0.3956           |
+| AdaBoostClassifier      :   0.8040  0.4933  -0.3107           |
+| SupportVectorMachine    :   0.8515  0.5035  -0.3479           |
+| LogisticRegression      :   0.8236  0.5006  -0.3230           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4946  -0.3443  0.0094   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8704  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0001  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0327  0.0006   |
+| Median distance to closest record        :   4.6953           |
+| Hitting rate (0.03 x range(att))         :   0.2372           |
+| Epsilon identifiability risk             :   0.0228           |       
+| Privacy loss (diff. in eps. risk)        :   0.0054           |
+| Membership inference attack Classifier F1:   0.3436  0.0009   |
+|   -> Precision                           :   0.5558  0.0461   |
+|   -> Recall                              :   0.0114  0.0009   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 4, epochs 244, seed 18) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0091  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.2729           |
+| PCA angle diff. between eigenvectors     :   0.9607           |
+| Average confidence interval overlap      :   0.0000  0.0000   |
+|   -> # non-overlapping COIs at 95%       :    8               |
+|   -> fraction of non-overlapping CIs     :   1.0000           |
+| Mixed correlation matrix difference      :   3.5893           |
+| Pairwise mutual information difference   :   0.4232           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.0444  0.0057   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.0476  0.0054   |
+|       -> avg. Total Variation Distance   :   0.0192  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0015  0.0015   |
+| Propensity mean squared error (pMSE)     :   0.0034  0.0001   |
+|   -> average pMSE classifier accuracy    :   0.5535  0.0032   |
+| Quantile mean squared error (qMSE)       :   0.0047  0.0044   |
+| Nearest neighbour adversarial accuracy   :   0.9028  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.2870           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.5147  -0.4147  0.0044   |
+| AdaBoostClassifier      :   0.7840  0.4763  -0.3077  0.0186   |
+| SupportVectorMachine    :   0.8462  0.5158  -0.3304  0.0036   |
+| LogisticRegression      :   0.8224  0.5278  -0.2946  0.0086   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5087  -0.3368  0.0053   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.5190  -0.3575           |
+| AdaBoostClassifier      :   0.8040  0.4801  -0.3240           |
+| SupportVectorMachine    :   0.8515  0.5119  -0.3396           |
+| LogisticRegression      :   0.8236  0.5089  -0.3147           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.5050  -0.3339  0.0047   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8730  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0014  0.0019   |
+| Privacy loss (diff. in NNAA)             :   -0.0294  0.0005   |
+| Median distance to closest record        :   4.5210           |
+| Hitting rate (0.03 x range(att))         :   0.2111           |
+| Epsilon identifiability risk             :   0.0247           |       
+| Privacy loss (diff. in eps. risk)        :   0.0062           |
+| Membership inference attack Classifier F1:   0.3439  0.0028   |
+|   -> Precision                           :   0.4989  0.0561   |
+|   -> Recall                              :   0.0119  0.0026   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 4, epochs 244, seed 19) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0339  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.3266           |
+| PCA angle diff. between eigenvectors     :   0.4452           |
+| Average confidence interval overlap      :   0.0768  0.0768   |
+|   -> # non-overlapping COIs at 95%       :    7               |
+|   -> fraction of non-overlapping CIs     :   0.8750           |
+| Mixed correlation matrix difference      :   3.5916           |
+| Pairwise mutual information difference   :   0.1798           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.1661  0.0365   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.1834  0.0365   |
+|       -> avg. Total Variation Distance   :   0.0278  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0022  0.0022   |
+| Propensity mean squared error (pMSE)     :   0.0463  0.0008   |
+|   -> average pMSE classifier accuracy    :   0.7223  0.0020   |
+| Quantile mean squared error (qMSE)       :   0.0082  0.0042   |
+| Nearest neighbour adversarial accuracy   :   0.9308  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.2942           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4687  -0.4607  0.0056   |
+| AdaBoostClassifier      :   0.7840  0.5305  -0.2535  0.0187   |
+| SupportVectorMachine    :   0.8462  0.5054  -0.3408  0.0035   |
+| LogisticRegression      :   0.8224  0.5333  -0.2891  0.0128   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5095  -0.3360  0.0059   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4610  -0.4155           |
+| AdaBoostClassifier      :   0.8040  0.4928  -0.3112           |
+| SupportVectorMachine    :   0.8515  0.5087  -0.3428           |
+| LogisticRegression      :   0.8236  0.4991  -0.3244           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4904  -0.3485  0.0116   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8707  0.0009   |
+| Privacy loss (diff. in NNDR)             :   0.0027  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0303  0.0006   |
+| Median distance to closest record        :   6.2993           |
+| Hitting rate (0.03 x range(att))         :   0.0430           |
+| Epsilon identifiability risk             :   0.0128           |       
+| Privacy loss (diff. in eps. risk)        :   0.0020           |
+| Membership inference attack Classifier F1:   0.3404  0.0013   |
+|   -> Precision                           :   0.4488  0.0438   |
+|   -> Recall                              :   0.0086  0.0012   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 5, epochs 383, seed 10) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0508  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.2378           |
+| PCA angle diff. between eigenvectors     :   0.5087           |
+| Average confidence interval overlap      :   0.1847  0.1223   |
+|   -> # non-overlapping COIs at 95%       :    6               |
+|   -> fraction of non-overlapping CIs     :   0.7500           |
+| Mixed correlation matrix difference      :   3.5878           |
+| Pairwise mutual information difference   :   3.1190           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.2466  0.0452   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.2713  0.0429   |
+|       -> avg. Total Variation Distance   :   0.0489  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0039  0.0039   |
+| Propensity mean squared error (pMSE)     :   0.0655  0.0005   |
+|   -> average pMSE classifier accuracy    :   0.7777  0.0017   |
+| Quantile mean squared error (qMSE)       :   0.0117  0.0039   |
+| Nearest neighbour adversarial accuracy   :   0.9716  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.4237           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.4767  -0.4527  0.0087   |
+| AdaBoostClassifier      :   0.7840  0.4054  -0.3786  0.0138   |
+| SupportVectorMachine    :   0.8462  0.4684  -0.3778  0.0052   |
+| LogisticRegression      :   0.8224  0.4711  -0.3513  0.0068   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.4554  -0.3901  0.0046   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4566  -0.4199           |
+| AdaBoostClassifier      :   0.8040  0.4020  -0.4020           |
+| SupportVectorMachine    :   0.8515  0.4460  -0.4054           |
+| LogisticRegression      :   0.8236  0.5048  -0.3188           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4523  -0.3865  0.0115   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8859  0.0008   |
+| Privacy loss (diff. in NNDR)             :   -0.0043  0.0018   |
+| Privacy loss (diff. in NNAA)             :   -0.0182  0.0004   |
+| Median distance to closest record        :   6.3726           |
+| Hitting rate (0.03 x range(att))         :   0.0284           |
+| Epsilon identifiability risk             :   0.0098           |       
+| Privacy loss (diff. in eps. risk)        :   0.0027           |
+| Membership inference attack Classifier F1:   0.3344  0.0002   |
+|   -> Precision                           :   0.5667  0.1247   |
+|   -> Recall                              :   0.0012  0.0002   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 5, epochs 383, seed 11) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully
+
+SynthEval results
+=================================================================
+
+Utility metric description                    value   error                                 
++---------------------------------------------------------------+
+| Average dimensionwise means diff. (nums) :   0.0060  0.0006   |
+| PCA difference in eigenvalues (exp. var.):   0.2856           |
+| PCA angle diff. between eigenvectors     :   0.9156           |
+| Average confidence interval overlap      :   0.1760  0.1158   |
+|   -> # non-overlapping COIs at 95%       :    6               |
+|   -> fraction of non-overlapping CIs     :   0.7500           |
+| Mixed correlation matrix difference      :   3.5697           |
+| Pairwise mutual information difference   :   0.5393           |
+| Kolmogorov–Smirnov / Total Variation Distance test            |
+|   -> average combined statistic          :   0.0440  0.0053   |
+|       -> avg. Kolmogorov–Smirnov dist.   :   0.0468  0.0051   |
+|       -> avg. Total Variation Distance   :   0.0215  nan   |
+|   -> average combined p-value            :   0.0001  0.0001   |
+|       -> # significant tests at a=0.05   :    9               |
+|       -> fraction of significant tests   :   1.0000           |
+| Average empirical Hellinger distance     :   0.0017  0.0017   |
+| Propensity mean squared error (pMSE)     :   0.0023  0.0002   |
+|   -> average pMSE classifier accuracy    :   0.5661  0.0034   |
+| Quantile mean squared error (qMSE)       :   0.0047  0.0044   |
+| Nearest neighbour adversarial accuracy   :   0.9035  0.0000   |
+| prediction AUROC difference (log_reg)    :   -0.4995           |
++---------------------------------------------------------------+
+
+Classification accuracy test     
+avg. of 5-fold cross val.:
+classifier model             acc_rr  acc_fr    diff   error
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.9294  0.5132  -0.4162  0.0146   |
+| AdaBoostClassifier      :   0.7840  0.5046  -0.2793  0.0106   |
+| SupportVectorMachine    :   0.8462  0.5056  -0.3406  0.0035   |
+| LogisticRegression      :   0.8224  0.5015  -0.3209  0.0039   |
++---------------------------------------------------------------+
+| Average                 :   0.8455  0.5062  -0.3393  0.0047   |
++---------------------------------------------------------------+
+
+hold out data results:
++---------------------------------------------------------------+
+| RandomForestClassifier  :   0.8764  0.4930  -0.3834           |
+| AdaBoostClassifier      :   0.8040  0.4842  -0.3198           |
+| SupportVectorMachine    :   0.8515  0.4394  -0.4120           |
+| LogisticRegression      :   0.8236  0.4965  -0.3271           |
++---------------------------------------------------------------+
+| Average                 :   0.8389  0.4783  -0.3606  0.0111   |
++---------------------------------------------------------------+
+    
+Privacy metric description                    value   error                                 
++---------------------------------------------------------------+
+| Nearest neighbour distance ratio         :   0.8713  0.0009   |
+| Privacy loss (diff. in NNDR)             :   -0.0002  0.0020   |
+| Privacy loss (diff. in NNAA)             :   -0.0314  0.0006   |
+| Median distance to closest record        :   4.4346           |
+| Hitting rate (0.03 x range(att))         :   0.2312           |
+| Epsilon identifiability risk             :   0.0241           |       
+| Privacy loss (diff. in eps. risk)        :   0.0057           |
+| Membership inference attack Classifier F1:   0.3407  0.0013   |
+|   -> Precision                           :   0.4024  0.0316   |
+|   -> Recall                              :   0.0098  0.0014   |
++---------------------------------------------------------------+
+    
+
+=== DPWGAN run (epsilon 5, epochs 383, seed 12) ===
+n=16346, sample_rate=0.01 -> batch_size=164
+Inferred categorical columns (unique threshold: 10):
+['median_house_value_binary']
+SynthEval: synthetic data read successfully

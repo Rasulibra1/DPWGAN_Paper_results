@@ -1,0 +1,56 @@
+/export/spool/slurm/slurmd.spool/job47841185/slurm_script: line 18: .venv/bin/activate: No such file or directory
+INFO:root:Using device=cpu
+/data/homezvol2/ibragimr/DPWGAN_Paper_results/DPWGAN_wine.py:234: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  data_tensor = torch.tensor(data_np, dtype=torch.float32, device=device)
+INFO:dpwgan.dpwgan:Epoch 0
+Discriminator loss: -0.03680313378572464; Generator loss: 0.0755336582660675
+INFO:dpwgan.dpwgan:Epoch 1
+Discriminator loss: -0.18237151205539703; Generator loss: 0.23129309713840485
+INFO:dpwgan.dpwgan:Epoch 2
+Discriminator loss: -0.4041936695575714; Generator loss: 0.45737224817276
+INFO:dpwgan.dpwgan:Epoch 3
+Discriminator loss: -0.7649849057197571; Generator loss: 0.7982840538024902
+INFO:dpwgan.dpwgan:Epoch 4
+Discriminator loss: -1.3620398044586182; Generator loss: 1.4279814958572388
+INFO:dpwgan.dpwgan:Epoch 5
+Discriminator loss: -2.1858956813812256; Generator loss: 2.2272613048553467
+INFO:dpwgan.dpwgan:Epoch 6
+Discriminator loss: -2.6761555671691895; Generator loss: 2.7363622188568115
+INFO:dpwgan.dpwgan:Epoch 7
+Discriminator loss: -3.3144476413726807; Generator loss: 3.4125266075134277
+INFO:dpwgan.dpwgan:Epoch 8
+Discriminator loss: -4.27394962310791; Generator loss: 4.422756195068359
+INFO:dpwgan.dpwgan:Epoch 9
+Discriminator loss: -5.268226146697998; Generator loss: 5.317013263702393
+INFO:dpwgan.dpwgan:Epoch 10
+Discriminator loss: -5.176244735717773; Generator loss: 5.2168660163879395
+INFO:dpwgan.dpwgan:Epoch 11
+Discriminator loss: -5.52955961227417; Generator loss: 5.761765956878662
+INFO:dpwgan.dpwgan:Epoch 12
+Discriminator loss: -6.1808366775512695; Generator loss: 6.334256172180176
+INFO:dpwgan.dpwgan:Epoch 13
+Discriminator loss: -6.644394397735596; Generator loss: 6.734776496887207
+INFO:dpwgan.dpwgan:Epoch 14
+Discriminator loss: -7.455776691436768; Generator loss: 7.561431884765625
+INFO:dpwgan.dpwgan:Epoch 15
+Discriminator loss: -8.242429733276367; Generator loss: 8.284405708312988
+INFO:dpwgan.dpwgan:Epoch 16
+Discriminator loss: -8.721359252929688; Generator loss: 8.662130355834961
+INFO:dpwgan.dpwgan:Epoch 17
+Discriminator loss: -8.559305191040039; Generator loss: 8.94295883178711
+INFO:dpwgan.dpwgan:Epoch 18
+Discriminator loss: -8.490259170532227; Generator loss: 8.51899528503418
+INFO:dpwgan.dpwgan:Epoch 19
+Discriminator loss: -8.073840141296387; Generator loss: 8.407917976379395
+Traceback (most recent call last):
+  File "/data/homezvol2/ibragimr/DPWGAN_Paper_results/DPWGAN_wine.py", line 342, in <module>
+    main()
+  File "/data/homezvol2/ibragimr/DPWGAN_Paper_results/DPWGAN_wine.py", line 252, in main
+    synth_df = dataset.from_onehot_flat(flat_synth)
+  File "/data/homezvol2/ibragimr/DPWGAN_Paper_results/dpwgan/datasets.py", line 63, in from_onehot_flat
+    categorical_data[var] = from_onehot(var_data, code)
+  File "/data/homezvol2/ibragimr/DPWGAN_Paper_results/dpwgan/datasets.py", line 17, in from_onehot
+    return codes[[np.where(data[i] == 1)[0][0] for i in range(len(data))]]
+  File "/data/homezvol2/ibragimr/DPWGAN_Paper_results/dpwgan/datasets.py", line 17, in <listcomp>
+    return codes[[np.where(data[i] == 1)[0][0] for i in range(len(data))]]
+IndexError: index 0 is out of bounds for axis 0 with size 0

@@ -1,0 +1,23 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pip in /opt/apps/python/3.10.2/lib/python3.10/site-packages (22.0.3)
+Collecting pip
+  Using cached pip-25.3-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+Successfully installed pip-25.3
+Defaulting to user installation because normal site-packages is not writeable
+Collecting statsmodels
+  Using cached statsmodels-0.14.6-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+Requirement already satisfied: numpy<3,>=1.22.3 in /data/homezvol2/ibragimr/.local/lib/python3.10/site-packages (from statsmodels) (1.26.4)
+Requirement already satisfied: scipy!=1.9.2,>=1.8 in /data/homezvol2/ibragimr/.local/lib/python3.10/site-packages (from statsmodels) (1.14.1)
+Requirement already satisfied: pandas!=2.1.0,>=1.4 in /opt/apps/python/3.10.2/lib/python3.10/site-packages (from statsmodels) (1.4.1)
+Collecting patsy>=0.5.6 (from statsmodels)
+  Using cached patsy-1.0.2-py2.py3-none-any.whl.metadata (3.6 kB)
+Requirement already satisfied: packaging>=21.3 in /opt/apps/python/3.10.2/lib/python3.10/site-packages (from statsmodels) (21.3)
+Requirement already satisfied: python-dateutil>=2.8.1 in /opt/apps/python/3.10.2/lib/python3.10/site-packages (from pandas!=2.1.0,>=1.4->statsmodels) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /opt/apps/python/3.10.2/lib/python3.10/site-packages (from pandas!=2.1.0,>=1.4->statsmodels) (2021.3)
+Requirement already satisfied: six>=1.5 in /opt/apps/python/3.10.2/lib/python3.10/site-packages (from python-dateutil>=2.8.1->pandas!=2.1.0,>=1.4->statsmodels) (1.16.0)
+Using cached statsmodels-0.14.6-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (10.4 MB)
+Using cached patsy-1.0.2-py2.py3-none-any.whl (233 kB)
+Installing collected packages: patsy, statsmodels
+
+Successfully installed patsy-1.0.2 statsmodels-0.14.6
