@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=gan_wine
 #SBATCH --partition=standard          # <-- change to your CPU partition name
-#SBATCH --account=AKENNEY1_LAB                # <-- your real account
+#SBATCH --account=AQU2_LAB               # <-- your real account
 #SBATCH --nodes=1
 #SBATCH --ntasks=1                   # 1 task
 #SBATCH --cpus-per-task=4            # e.g. 4 CPU cores (adjust as needed)
