@@ -23,7 +23,7 @@ from dpwgan.utils import create_categorical_gan
 ROOT = Path("/data/homezvol2/ibragimr/DPWGAN_Paper_results")
 
 SAVE_SYNTH = True
-SYNTH_DIR  = ROOT / "data" / "synth" / "wine" / "dpwgan_ana"  # pick whatever path you like
+SYNTH_DIR  = ROOT / "data" / "synth" / "wine" / "dpwgan_choose"  # pick whatever path you like
 
 
 # You said train/holdout are in a folder called "data"
@@ -35,7 +35,7 @@ EVAL_DIR    = ROOT / "eval" / "metrics_raw" / "wine" / "dpwgan"
 SUMMARY_DIR = ROOT / "eval" / "summaries"
 
 EPS_LIST   = [5]
-SEED_RANGE = range(1, 21)
+SEED_RANGE = range(100, 120)
 
 # GAN hyperparams
 NOISE_DIM   = 20
